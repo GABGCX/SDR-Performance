@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SDR Performance - bater a meta não é sorte, é conta</title>
+<title>SDR Performance: bater a meta não é sorte, é conta</title>
 <meta name="description" content="O SDR Performance transforma sua meta mensal em quantas ligações você precisa fazer hoje. Planejamento reverso, blocos de foco, análise de ligações por IA e roleplay. Para SDRs e BDRs.">
-<meta property="og:title" content="SDR Performance — bater a meta não é sorte, é conta">
+<meta property="og:title" content="SDR Performance: bater a meta não é sorte, é conta">
 <meta property="og:description" content="Sua meta mensal virada em plano diário. Com as suas taxas, não com a média do mercado.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   SDR PERFORMANCE — Design tokens
+   SDR PERFORMANCE / Design tokens
    Paleta oficial do produto (doc §19)
    ============================================================ */
 :root{
@@ -129,7 +129,7 @@ h3.display{font-size:clamp(22px,2.4vw,30px);line-height:1.05}
 .num{font-family:var(--mono);font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 .hl{color:var(--honey)}
 
-/* marca-texto mel — usado uma vez, no H1 */
+/* marca-texto mel, usado uma vez no H1 */
 .mark{
   position:relative;
   display:inline-block;
@@ -414,8 +414,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   white-space:nowrap;
 }
 .ticker-item b{color:var(--ink-2);font-weight:500}
-.ticker-sep{width:5px;height:5px;background:var(--gold);flex:none;
-  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+
 
 /* ============================================================
    PROBLEMA
@@ -431,7 +430,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   font-size:14px;color:var(--ink-3);
   transition:transform .4s cubic-bezier(.2,.7,.3,1),opacity .4s,border-color .3s,color .3s;
 }
-.tool-x{color:#7A828A;font-family:var(--mono);font-size:12px}
+.tool-x{width:14px;height:14px;color:#7A828A;flex:none}
 .problem-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,80px);align-items:center}
 @media (max-width:940px){.problem-grid{grid-template-columns:1fr;gap:44px}}
 
@@ -516,6 +515,14 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   display:flex;align-items:center;justify-content:space-between;
   font-family:var(--mono);font-size:9px;color:var(--ink-3);margin-bottom:12px;padding:0 4px;
 }
+.scr-status{width:37px;height:9.5px;color:var(--ink-2);display:block}
+.a-mini-k svg{width:7px;height:7px;vertical-align:-1px;opacity:.75;margin:0 1px}
+.mk-n svg{width:15px;height:15px;display:inline-block;vertical-align:-3px}
+.msg-note svg{width:11px;height:11px;vertical-align:-2px;margin-right:4px}
+.a-btn svg{width:13px;height:13px;flex:none}
+.hero-meta svg{width:9px;height:9px;color:var(--honey);flex:none}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.ticker-item svg{width:6px;height:6px;color:var(--gold);flex:none}
 
 /* elementos internos do app */
 .a-hd{display:flex;align-items:center;gap:9px;margin-bottom:14px}
@@ -532,7 +539,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 }
 .a-k{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:7px;display:flex;justify-content:space-between}
 .a-big{font-family:var(--display);font-stretch:87%;font-weight:800;font-size:30px;line-height:1;letter-spacing:-.02em}
-.a-big small{font-size:13px;color:var(--ink-3);font-weight:600;margin-left:2px}
+.a-big small{font-size:12px;color:var(--ink-3);font-weight:600;margin-left:3px}
 .a-bar{height:6px;border-radius:99px;background:rgba(0,0,0,.35);overflow:hidden;margin-top:9px}
 .a-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--gold),var(--honey))}
 .a-sub{font-size:10.5px;color:var(--ink-2);margin-top:8px;line-height:1.35}
@@ -540,6 +547,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 .a-row>*{flex:1;min-width:0}
 .a-mini{background:var(--surface);border:1px solid rgba(255,255,255,.06);border-radius:13px;padding:9px}
 .a-mini-v{font-family:var(--mono);font-size:16px;font-weight:600;line-height:1}
+.a-mini-v small{font-size:10px;color:var(--ink-3);font-weight:400}
 .a-mini-k{font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:4px}
 .a-fn{display:flex;flex-direction:column;gap:5px;margin-top:2px}
 .a-fn-r{display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px;font-size:10px;color:var(--ink-2)}
@@ -555,17 +563,32 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 }
 .a-tabs{display:flex;justify-content:space-between;padding:9px 6px 2px;border-top:1px solid rgba(255,255,255,.06);margin-top:9px}
 .a-tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-weight:400;font-family:var(--mono);font-size:7px;letter-spacing:.06em;color:#5F686F;text-transform:uppercase}
-.a-tab b{font-weight:400;font-size:9px;line-height:1}
+.a-tab svg{width:12px;height:12px;display:block}
 .a-tab.on{color:var(--honey)}
 
-/* cronômetro hexagonal — Hora de Ouro */
-.hexring{width:150px;height:150px;margin:6px auto 10px;position:relative}
+.a-title{font-family:var(--display);font-stretch:87%;font-weight:800;font-size:23px;line-height:1.02;letter-spacing:-.02em}
+.a-list{display:flex;flex-direction:column}
+.a-li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid rgba(255,255,255,.06);font-size:10.5px;color:var(--ink-2)}
+.a-li:first-child{border-top:none}
+.a-li b{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--ink);text-align:right}
+.a-flag{color:var(--attention);border:1px solid rgba(247,144,9,.35);background:rgba(247,144,9,.1);border-radius:99px;padding:2px 7px;font-size:7.5px;letter-spacing:.08em}
+.a-mini-f{font-family:var(--mono);font-size:8px;color:var(--attention);margin-top:3px;letter-spacing:.02em}
+.a-live{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9px;color:var(--ink-3);letter-spacing:.06em;margin-bottom:4px}
+.a-live .dot{width:5px;height:5px;box-shadow:0 0 0 2px rgba(50,213,131,.18)}
+.a-live b{margin-left:auto;color:var(--honey);font-weight:500}
+.a-ghost{flex:1;text-align:center;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:9px;font-size:11px;color:var(--ink-2)}
+.a-foot{font-size:8.5px;color:var(--ink-3);text-align:center;margin:10px 0 0;line-height:1.4}
+.a-big small{display:block;font-size:10.5px;margin:4px 0 0}
+.a-tabs{margin-top:auto}
+
+/* cronometro hexagonal da Hora de Ouro */
+.hexring{width:146px;height:146px;margin:10px auto 12px;position:relative}
 .hexring svg{width:100%;height:100%;transform:rotate(-90deg)}
 .hexring-c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .hexring-t{font-family:var(--mono);font-size:27px;font-weight:600;letter-spacing:-.02em;line-height:1}
-.hexring-k{font-family:var(--mono);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--honey);margin-top:6px}
+.hexring-k{font-family:var(--mono);font-size:7.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--honey);margin-top:6px;text-align:center}
 
-/* gráfico de barras — Histórico */
+/* grafico de barras do Historico */
 .a-chart{display:flex;align-items:flex-end;gap:6px;height:78px;margin-top:8px}
 .a-chart div{flex:1;border-radius:4px 4px 2px 2px;background:linear-gradient(180deg,var(--honey),rgba(232,164,0,.35));position:relative}
 .a-chart div.lo{background:linear-gradient(180deg,#4C555D,#333B42)}
@@ -573,7 +596,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 .a-chart-x span{flex:1;text-align:center;font-family:var(--mono);font-size:8px;color:var(--ink-3)}
 
 /* ============================================================
-   IA — abas
+   IA / abas
    ============================================================ */
 .ai{position:relative}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
@@ -622,6 +645,10 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 .mk-n{font-family:var(--mono);font-size:12.5px;min-width:34px;text-align:right}
 .mk-lb{min-width:110px}
 
+.moments{border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px;margin-bottom:16px;background:rgba(0,0,0,.18)}
+.moments-k{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:11px}
+.moment{display:grid;grid-template-columns:46px 1fr;gap:12px;align-items:baseline;padding:5px 0;font-size:13.5px;color:var(--ink-2)}
+.moment b{font-family:var(--mono);font-size:12.5px;color:var(--honey);font-weight:600}
 .beetip{
   display:flex;gap:12px;padding:14px;border-radius:var(--r-md);
   background:rgba(246,195,68,.07);border:1px solid rgba(246,195,68,.2);
@@ -644,7 +671,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 .feat-list b{color:var(--ink);font-weight:600}
 
 /* ============================================================
-   BLOCO CLARO — comparação, plataformas, planos
+   BLOCO CLARO / comparacao, plataformas, planos
    ============================================================ */
 .light{background:var(--bone);color:var(--bone-ink);position:relative}
 .light::before{
@@ -765,6 +792,10 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 .form input:focus,.form select:focus{outline:none;border-color:var(--honey);background:rgba(0,0,0,.5)}
 .form .btn{flex:1 1 100%}
 .form-note{flex:1 1 100%;font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin:16px 0 0;letter-spacing:.02em;text-align:center}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
+.btn[disabled]{opacity:.65;cursor:progress;transform:none!important}
+.form-err a{color:var(--honey)}
 .form-ok{
   display:none;margin:32px auto 0;max-width:520px;padding:26px;
   border:1px solid rgba(50,213,131,.32);background:rgba(50,213,131,.08);border-radius:var(--r-lg);
@@ -830,6 +861,63 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
       <circle cx="18.6" cy="13.4" r="1.15" fill="#F6C344"/>
       <path d="M11.5 8.5 10 5.6M20.5 8.5 22 5.6" stroke="#1B1F24" stroke-width="1.5" stroke-linecap="round"/>
     </symbol>
+    <symbol id="i-hex" viewBox="0 0 24 24">
+      <path d="M12 2.5 20.9 7.6v8.8L12 21.5 3.1 16.4V7.6Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24">
+      <path d="M8 16 16 8M9.5 8H16v6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-play" viewBox="0 0 24 24">
+      <path d="M8 5.5v13l11-6.5Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-up" viewBox="0 0 24 24">
+      <path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M12 7.5v6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="12" cy="16.8" r="1.25" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-next" viewBox="0 0 24 24">
+      <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-status" viewBox="0 0 47 12">
+      <rect x="0" y="7.5" width="2.4" height="4.5" rx="1" fill="currentColor"/>
+      <rect x="3.8" y="5.5" width="2.4" height="6.5" rx="1" fill="currentColor"/>
+      <rect x="7.6" y="3" width="2.4" height="9" rx="1" fill="currentColor"/>
+      <path d="M14 6.4a6.4 6.4 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M16.4 9.2a2.8 2.8 0 0 1 3.2 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="18" cy="11.2" r=".9" fill="currentColor"/>
+      <rect x="29.6" y="3" width="14.4" height="8" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <rect x="31.2" y="4.6" width="9.6" height="4.8" rx="1.3" fill="currentColor"/>
+      <path d="M45.4 5.6v2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-tab-painel" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="8" height="8" rx="2.4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <rect x="13" y="3" width="8" height="8" rx="2.4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <rect x="3" y="13" width="8" height="8" rx="2.4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <rect x="13" y="13" width="8" height="8" rx="2.4" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="i-tab-metas" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-tab-ouro" viewBox="0 0 24 24">
+      <path d="M12 2.8 20.4 7.6v8.8L12 21.2 3.6 16.4V7.6Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M12 8.4V12l2.8 1.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-tab-hist" viewBox="0 0 24 24">
+      <path d="M3 21h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <rect x="4" y="12" width="4" height="6" rx="1.4" fill="currentColor"/>
+      <rect x="10" y="7" width="4" height="11" rx="1.4" fill="currentColor"/>
+      <rect x="16" y="3" width="4" height="15" rx="1.4" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-tab-mais" viewBox="0 0 24 24">
+      <circle cx="5" cy="12" r="2" fill="currentColor"/>
+      <circle cx="12" cy="12" r="2" fill="currentColor"/>
+      <circle cx="19" cy="12" r="2" fill="currentColor"/>
+    </symbol>
     <symbol id="check" viewBox="0 0 20 20">
       <path d="M3 10.5 7.5 15 17 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
@@ -842,7 +930,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 <!-- ===================== NAV ===================== -->
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a href="#topo" class="brand" aria-label="SDR Performance — início">
+    <a href="#topo" class="brand" aria-label="SDR Performance, ir para o início">
       <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
         <path d="M20 2.5 35.2 11.2v17.6L20 37.5 4.8 28.8V11.2Z" fill="none" stroke="#F6C344" stroke-width="2"/>
         <rect x="13" y="21" width="3.6" height="7" rx="1.4" fill="#F6C344" opacity=".55"/>
@@ -854,7 +942,6 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
     <nav class="nav-links" aria-label="Seções">
       <a href="#rotina">Rotina</a>
       <a href="#ia">IA</a>
-      <a href="#carreira">Carreira</a>
       <a href="#planos">Planos</a>
       <a href="#faq">Dúvidas</a>
     </nav>
@@ -873,15 +960,15 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
     <div>
       <p class="eyebrow rv">Acesso antecipado · beta fechado</p>
       <h1 class="display hero-h1 rv">Bater a meta não é sorte.<br>É <span class="mark">conta</span>.</h1>
-      <p class="lede hero-sub rv">O SDR Performance pega a sua meta do mês e devolve quantas ligações você precisa fazer <em>hoje</em>. Quando o dia foge do plano, a conta se refaz sozinha — com as suas taxas, não com a média do mercado.</p>
+      <p class="lede hero-sub rv">O SDR Performance pega a sua meta do mês e devolve quantas ligações você precisa fazer <em>hoje</em>. Quando o dia foge do plano, a conta se refaz sozinha, usando as suas taxas e não a média do mercado.</p>
       <div class="hero-actions rv">
         <a href="#lista" class="btn btn--primary magnet">Entrar na lista de acesso</a>
         <a href="#rotina" class="btn btn--ghost">Ver a rotina completa</a>
       </div>
       <div class="hero-meta rv">
-        <span><i>◆</i> App mobile primeiro</span>
-        <span><i>◆</i> Portal web e extensão</span>
-        <span><i>◆</i> Sem trocar o seu CRM</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hex"/></svg>App mobile primeiro</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hex"/></svg>Portal web e extensão</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hex"/></svg>Sem trocar o seu CRM</span>
       </div>
     </div>
 
@@ -896,17 +983,17 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
         <div class="field">
           <div class="field-top">
             <label class="field-label" for="meta">Sua meta de reuniões no mês</label>
-            <span class="field-val"><output id="metaOut">20</output><small>reuniões</small></span>
+            <span class="field-val"><output id="metaOut">40</output><small>reuniões</small></span>
           </div>
-          <input type="range" id="meta" min="4" max="60" step="1" value="20" aria-describedby="metaOut">
+          <input type="range" id="meta" min="4" max="80" step="1" value="40" aria-describedby="metaOut">
         </div>
 
         <div class="field">
           <div class="field-top">
             <label class="field-label" for="dias">Dias úteis de prospecção</label>
-            <span class="field-val"><output id="diasOut">21</output><small>dias</small></span>
+            <span class="field-val"><output id="diasOut">20</output><small>dias</small></span>
           </div>
-          <input type="range" id="dias" min="12" max="23" step="1" value="21" aria-describedby="diasOut">
+          <input type="range" id="dias" min="12" max="23" step="1" value="20" aria-describedby="diasOut">
         </div>
 
         <div class="calc-out">
@@ -915,25 +1002,25 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
             <div class="frow frow--call" id="rowLig">
               <svg class="frow-hex" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 21.1 6.8v10.4L12 22.5 2.9 17.2V6.8Z" fill="rgba(246,195,68,.16)" stroke="#F6C344" stroke-width="1.4"/></svg>
               <span class="frow-lb">Ligações <b class="mono" style="color:var(--ink-3);font-weight:400">/ dia</b></span>
-              <span class="frow-vl num" id="vLig">42</span>
+              <span class="frow-vl num" id="vLig">76</span>
             </div>
 
             <div class="frow" id="rowCon">
               <svg class="frow-hex" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 21.1 6.8v10.4L12 22.5 2.9 17.2V6.8Z" fill="none" stroke="rgba(246,195,68,.55)" stroke-width="1.4"/></svg>
               <span class="frow-lb">Contatos efetivos</span>
-              <span class="frow-vl num" id="vCon">13</span>
+              <span class="frow-vl num" id="vCon">25</span>
             </div>
 
             <div class="frow" id="rowDec">
               <svg class="frow-hex" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 21.1 6.8v10.4L12 22.5 2.9 17.2V6.8Z" fill="none" stroke="rgba(246,195,68,.4)" stroke-width="1.4"/></svg>
               <span class="frow-lb">Conversas com decisores</span>
-              <span class="frow-vl num" id="vDec">5</span>
+              <span class="frow-vl num" id="vDec">12</span>
             </div>
 
             <div class="frow frow--goal" id="rowReu">
               <svg class="frow-hex" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 21.1 6.8v10.4L12 22.5 2.9 17.2V6.8Z" fill="rgba(50,213,131,.14)" stroke="#32D583" stroke-width="1.4"/></svg>
               <span class="frow-lb">Reuniões agendadas</span>
-              <span class="frow-vl num" id="vReu">1,0</span>
+              <span class="frow-vl num" id="vReu">2,0</span>
             </div>
 
           </div>
@@ -941,7 +1028,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
           <div class="calc-foot">
             <div class="stat">
               <span class="stat-k">Tempo no telefone</span>
-              <span class="stat-v num" id="vTempo">2h14</span>
+              <span class="stat-v num" id="vTempo">2h02</span>
             </div>
             <div class="stat">
               <span class="stat-k">Blocos de Hora de Ouro</span>
@@ -957,26 +1044,26 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
             <div class="rates-grid">
               <div class="rate">
                 <label for="t1">Ligação vira contato efetivo</label>
-                <span class="rate-in"><input type="number" id="t1" value="30" min="1" max="100" inputmode="numeric"><span>%</span></span>
+                <span class="rate-in"><input type="number" id="t1" value="32" min="1" max="100" inputmode="numeric"><span>%</span></span>
               </div>
               <div class="rate">
                 <label for="t2">Contato vira decisor</label>
-                <span class="rate-in"><input type="number" id="t2" value="35" min="1" max="100" inputmode="numeric"><span>%</span></span>
+                <span class="rate-in"><input type="number" id="t2" value="46" min="1" max="100" inputmode="numeric"><span>%</span></span>
               </div>
               <div class="rate">
                 <label for="t3">Decisor vira reunião</label>
-                <span class="rate-in"><input type="number" id="t3" value="22" min="1" max="100" inputmode="numeric"><span>%</span></span>
+                <span class="rate-in"><input type="number" id="t3" value="18" min="1" max="100" inputmode="numeric"><span>%</span></span>
               </div>
               <div class="rate">
                 <label for="t4">Minutos por ligação</label>
-                <span class="rate-in"><input type="number" id="t4" value="3.2" min=".5" max="30" step=".1" inputmode="decimal"><span>min</span></span>
+                <span class="rate-in"><input type="number" id="t4" value="1.6" min=".5" max="30" step=".1" inputmode="decimal"><span>min</span></span>
               </div>
             </div>
           </details>
 
           <p class="calc-note">
             <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.4" stroke="#8B949C" stroke-width="1.4"/><path d="M10 9v5M10 6.2v.9" stroke="#8B949C" stroke-width="1.6" stroke-linecap="round"/></svg>
-            As taxas acima são um ponto de partida. No app, o cálculo usa o seu histórico real e refaz a previsão a cada resultado que você registra.
+            As taxas iniciais são as de uma SDR outbound real. No app, o cálculo passa a usar o seu histórico dos últimos 30 dias e refaz a previsão a cada resultado registrado.
           </p>
         </div>
       </div>
@@ -998,13 +1085,12 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
       <h2 class="display rv">Seu dia está espalhado em sete abas</h2>
       <p class="lede rv">Dado é o que não falta. O que falta é a resposta simples, às 14h de uma terça: <strong style="color:var(--ink);font-weight:600">o que eu faço agora para não perder o mês?</strong></p>
       <div class="tools rv" id="tools">
-        <span class="tool">CRM <span class="tool-x">↗</span></span>
-        <span class="tool">Planilha de controle <span class="tool-x">↗</span></span>
-        <span class="tool">Discador <span class="tool-x">↗</span></span>
-        <span class="tool">Bloco de notas <span class="tool-x">↗</span></span>
-        <span class="tool">Cronômetro <span class="tool-x">↗</span></span>
-        <span class="tool">Plataforma de treino <span class="tool-x">↗</span></span>
-        <span class="tool">Portal de vagas <span class="tool-x">↗</span></span>
+        <span class="tool">CRM <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
+        <span class="tool">Planilha de controle <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
+        <span class="tool">Discador <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
+        <span class="tool">Bloco de notas <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
+        <span class="tool">Cronômetro <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
+        <span class="tool">Plataforma de treino <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
       </div>
     </div>
 
@@ -1035,7 +1121,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   <div class="wrap">
     <div class="sec-head rv">
       <p class="eyebrow">A rotina</p>
-      <h2 class="display">Quatro telas que cabem entre duas ligações</h2>
+      <h2 class="display">Cinco telas que cabem entre duas ligações</h2>
       <p class="lede">O núcleo do produto é a rotina diária. Tudo o mais existe para melhorar o que acontece dentro dela.</p>
     </div>
 
@@ -1043,31 +1129,38 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
       <div class="tour-steps" id="steps">
 
         <article class="step is-on" data-i="0">
-          <span class="step-k">Dashboard</span>
-          <h3 class="display">Abre o app e sabe onde está</h3>
-          <p>Meta do dia, quanto falta e a próxima ação — nessa ordem de prioridade visual. Não é um relatório comprimido numa tela de celular.</p>
-          <ul class="step-list"><li>Meta do dia</li><li>Previsão de hoje</li><li>Funil completo</li><li>Melhor horário</li></ul>
+          <span class="step-k">Onboarding</span>
+          <h3 class="display">Seis perguntas e o plano está pronto</h3>
+          <p>Você responde função, meta e seus números aproximados. Em menos de dois minutos a BeeIA devolve o volume diário que a sua meta exige. Não sabe algum número? Deixe em branco e ela usa referência de mercado, avisando quando trocar pelos seus dados.</p>
+          <ul class="step-list"><li>6 perguntas</li><li>Menos de 2 minutos</li><li>Plano na primeira sessão</li></ul>
         </article>
 
         <article class="step" data-i="1">
-          <span class="step-k">Metas</span>
-          <h3 class="display">A meta vira volume, não motivação</h3>
-          <p>Você informa a meta do mês e os dias disponíveis. O sistema faz o caminho de volta: reuniões, decisores, contatos efetivos, ligações e horas de telefone.</p>
-          <ul class="step-list"><li>Planejamento reverso</li><li>Taxas pessoais</li><li>Recálculo adaptativo</li></ul>
+          <span class="step-k">Dashboard</span>
+          <h3 class="display">Abre o app e sabe onde está</h3>
+          <p>Meta do dia, quanto falta e a próxima ação, nessa ordem de prioridade visual. Quando o ritmo cai, o app não esconde: avisa que você está atrás e diz de quanto é o buraco em ligações.</p>
+          <ul class="step-list"><li>Meta do dia</li><li>Previsão de hoje</li><li>Funil do mês</li><li>Ações rápidas</li></ul>
         </article>
 
         <article class="step" data-i="2">
-          <span class="step-k">Hora de Ouro</span>
-          <h3 class="display">Cinquenta minutos sem distração</h3>
-          <p>Um bloco de foco com objetivo declarado e registro rápido no fim. Nenhum anúncio aparece durante a Hora de Ouro, durante ligações ou em roleplay.</p>
-          <ul class="step-list"><li>Objetivo do bloco</li><li>Registro em segundos</li><li>Resumo e recomendação</li></ul>
+          <span class="step-k">Metas</span>
+          <h3 class="display">A meta vira volume, não motivação</h3>
+          <p>Você informa a meta do mês e os dias disponíveis. O sistema faz o caminho de volta: reuniões, decisores, contatos efetivos, ligações e horas de telefone, sempre com as suas taxas dos últimos 30 dias.</p>
+          <ul class="step-list"><li>Planejamento reverso</li><li>Taxas reais</li><li>Recálculo diário</li></ul>
         </article>
 
         <article class="step" data-i="3">
+          <span class="step-k">Hora de Ouro</span>
+          <h3 class="display">Cinquenta minutos sem distração</h3>
+          <p>Um bloco de foco com objetivo declarado e contador de uma tocada só. Nenhuma notificação e nenhum anúncio aparecem durante a Hora de Ouro, durante ligações ou em roleplay.</p>
+          <ul class="step-list"><li>Objetivo do bloco</li><li>Registro em segundos</li><li>Resumo ao final</li></ul>
+        </article>
+
+        <article class="step" data-i="4">
           <span class="step-k">Histórico</span>
           <h3 class="display">A evolução que a planilha não mostra</h3>
-          <p>Volume, conversão por etapa, melhor dia e melhor horário. É daqui que saem as taxas usadas para calcular o seu próximo mês.</p>
-          <ul class="step-list"><li>Dia, semana, mês</li><li>Evolução das taxas</li><li>Melhor horário</li></ul>
+          <p>Volume, conversão por etapa, melhor dia e melhor horário. É daqui que saem as taxas usadas para calcular o seu próximo mês, e é aqui que você vê a curva subindo.</p>
+          <ul class="step-list"><li>Dia, semana, mês</li><li>Evolução das taxas</li><li>Padrões do mês</li></ul>
         </article>
 
       </div>
@@ -1075,137 +1168,154 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
       <div class="tour-stage">
         <div class="phone rv" id="phone">
 
-          <!-- TELA 1 · DASHBOARD -->
+          <!-- TELA 1 - ONBOARDING -->
           <div class="scr is-on" data-s="0">
-            <div class="scr-bar"><span>9:41</span><span>▮▮▮ ▲ 100%</span></div>
-            <div class="a-hd">
-              <svg class="a-av" viewBox="0 0 32 32" aria-hidden="true"><use href="#bee"/></svg>
-              <div><div class="a-hd-t">Bom dia, Rafa</div><div class="a-hd-s">terça · 12 de agosto</div></div>
-            </div>
-            <div class="a-card a-card--hi">
-              <div class="a-k"><span>Meta do dia</span><span style="color:var(--attention)">EM ANDAMENTO</span></div>
-              <div class="a-big">1<small>/2 reuniões</small></div>
-              <div class="a-bar"><i style="width:50%"></i></div>
-              <div class="a-sub">Falta 1 reunião. Você tem 3 decisores na fila e 2h de janela.</div>
-            </div>
-            <div class="a-row" style="margin-bottom:9px">
-              <div class="a-mini"><div class="a-mini-v">42</div><div class="a-mini-k">Ligações</div></div>
-              <div class="a-mini"><div class="a-mini-v">13</div><div class="a-mini-k">Contatos</div></div>
-              <div class="a-mini"><div class="a-mini-v">5</div><div class="a-mini-k">Decisores</div></div>
-            </div>
-            <div class="a-card">
-              <div class="a-k"><span>Funil de hoje</span><span>18/42</span></div>
-              <div class="a-fn">
-                <div class="a-fn-r"><div class="a-fn-t"><i style="width:44%"></i><span>Ligações</span></div><div class="a-fn-n">18</div></div>
-                <div class="a-fn-r"><div class="a-fn-t"><i style="width:31%"></i><span>Contatos</span></div><div class="a-fn-n">6</div></div>
-                <div class="a-fn-r"><div class="a-fn-t"><i style="width:20%"></i><span>Decisores</span></div><div class="a-fn-n">3</div></div>
-                <div class="a-fn-r"><div class="a-fn-t"><i style="width:12%"></i><span>Reuniões</span></div><div class="a-fn-n">1</div></div>
+            <div class="scr-bar"><span>9:46</span><svg class="scr-status" viewBox="0 0 47 12" aria-hidden="true"><use href="#i-status"/></svg></div>
+            <div class="a-k" style="color:var(--honey);margin-bottom:8px">Seu perfil está pronto</div>
+            <div class="a-title">Ana, sua rotina precisa de 76 ligações por dia</div>
+            <div class="a-card" style="margin-top:12px">
+              <div class="a-k"><span>Planejamento reverso</span></div>
+              <div class="a-list">
+                <div class="a-li"><span>Meta mensal</span><b>40 reuniões</b></div>
+                <div class="a-li"><span>Meta diária</span><b style="color:var(--honey)">2 reuniões</b></div>
+                <div class="a-li"><span>Decisores por dia</span><b>12</b></div>
+                <div class="a-li"><span>Contatos efetivos</span><b>25</b></div>
+                <div class="a-li"><span>Ligações por dia</span><b>76</b></div>
+                <div class="a-li"><span>Blocos de foco</span><b>3 de 50 min</b></div>
               </div>
             </div>
-            <button class="a-btn" type="button" tabindex="-1">▶ Iniciar Hora de Ouro</button>
+            <div class="a-card" style="display:flex;gap:9px;align-items:flex-start">
+              <svg class="a-av" style="width:22px;height:22px;flex:none" viewBox="0 0 32 32" aria-hidden="true"><use href="#bee"/></svg>
+              <div class="a-sub" style="margin:0"><b style="color:var(--honey)">BeeIA:</b> esse cálculo usa referências de mercado. Depois de 5 dias de registro, passo a usar as suas taxas reais.</div>
+            </div>
+            <button class="a-btn" type="button" tabindex="-1">Ir para o Dashboard</button>
             <div class="a-tabs">
-              <span class="a-tab on"><b>◆</b>Painel</span><span class="a-tab"><b>◆</b>Metas</span>
-              <span class="a-tab"><b>◆</b>Ouro</span><span class="a-tab"><b>◆</b>Histórico</span><span class="a-tab"><b>◆</b>Mais</span>
+              <span class="a-tab on"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-painel"/></svg>Dashboard</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-metas"/></svg>Metas</span>
+              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-ouro"/></svg>Ouro</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-hist"/></svg>Histórico</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-mais"/></svg>Mais</span>
             </div>
           </div>
 
-          <!-- TELA 2 · METAS -->
+          <!-- TELA 2 - DASHBOARD -->
           <div class="scr" data-s="1">
-            <div class="scr-bar"><span>9:41</span><span>▮▮▮ ▲ 100%</span></div>
+            <div class="scr-bar"><span>14:12</span><svg class="scr-status" viewBox="0 0 47 12" aria-hidden="true"><use href="#i-status"/></svg></div>
             <div class="a-hd">
-              <div><div class="a-hd-t">Metas e planejamento</div><div class="a-hd-s">agosto · 21 dias úteis</div></div>
+              <svg class="a-av" viewBox="0 0 32 32" aria-hidden="true"><use href="#bee"/></svg>
+              <div><div class="a-hd-t">Boa tarde, Ana</div><div class="a-hd-s">terça, 4 de agosto</div></div>
             </div>
             <div class="a-card a-card--hi">
-              <div class="a-k"><span>Meta do mês</span><span>EDITAR</span></div>
-              <div class="a-big">20<small>reuniões</small></div>
-              <div class="a-sub">Para chegar lá, o plano diário fica assim:</div>
+              <div class="a-k"><span>Meta do dia</span><span class="a-flag">Atrás do ritmo</span></div>
+              <div class="a-big">1<small>de 2 reuniões</small></div>
+              <div class="a-bar"><i style="width:50%"></i></div>
+              <div class="a-sub">Faltam 35 ligações. Um bloco de 50 min resolve.</div>
+            </div>
+            <button class="a-btn" style="margin:0 0 10px" type="button" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-ouro"/></svg> Iniciar Hora de Ouro</button>
+            <div class="a-k" style="justify-content:space-between"><span>Previsão para hoje</span><span>atualizada 14:05</span></div>
+            <div class="a-row" style="margin-bottom:7px">
+              <div class="a-mini"><div class="a-mini-v">41<small>/76</small></div><div class="a-mini-k">Ligações</div><div class="a-mini-f">faltam 35</div></div>
+              <div class="a-mini"><div class="a-mini-v">13<small>/25</small></div><div class="a-mini-k">Contatos</div><div class="a-mini-f">faltam 12</div></div>
+            </div>
+            <div class="a-row">
+              <div class="a-mini"><div class="a-mini-v">6<small>/12</small></div><div class="a-mini-k">Decisores</div><div class="a-mini-f">faltam 6</div></div>
+              <div class="a-mini"><div class="a-mini-v">1h00</div><div class="a-mini-k">Em foco hoje</div><div class="a-mini-f" style="color:var(--ink-3)">2 blocos</div></div>
+            </div>
+            <div class="a-tabs">
+              <span class="a-tab on"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-painel"/></svg>Dashboard</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-metas"/></svg>Metas</span>
+              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-ouro"/></svg>Ouro</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-hist"/></svg>Histórico</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-mais"/></svg>Mais</span>
+            </div>
+          </div>
+
+          <!-- TELA 3 - METAS -->
+          <div class="scr" data-s="2">
+            <div class="scr-bar"><span>14:15</span><svg class="scr-status" viewBox="0 0 47 12" aria-hidden="true"><use href="#i-status"/></svg></div>
+            <div class="a-hd">
+              <div><div class="a-hd-t">Planejamento reverso</div><div class="a-hd-s">para 40 reuniões em agosto</div></div>
+            </div>
+            <div class="a-card a-card--hi" style="padding:11px 13px">
+              <div class="a-sub" style="margin:0">Você informa a meta. O sistema calcula o resto.</div>
             </div>
             <div class="a-card">
-              <div class="a-k"><span>Plano reverso · por dia</span><span style="color:var(--honey)">SUAS TAXAS</span></div>
+              <div class="a-k"><span>O sistema calcula</span><span style="color:var(--honey)">SUAS TAXAS</span></div>
               <div class="a-fn">
-                <div class="a-fn-r"><div class="a-fn-t"><i style="width:100%"></i><span>Ligações</span></div><div class="a-fn-n">42</div></div>
-                <div class="a-fn-r"><div class="a-fn-t"><i style="width:32%"></i><span>Contatos efetivos</span></div><div class="a-fn-n">13</div></div>
-                <div class="a-fn-r"><div class="a-fn-t"><i style="width:12%"></i><span>Decisores</span></div><div class="a-fn-n">5</div></div>
-                <div class="a-fn-r"><div class="a-fn-t"><i style="width:6%"></i><span>Reuniões</span></div><div class="a-fn-n">1</div></div>
+                <div class="a-fn-r"><div class="a-fn-t"><i style="width:6%"></i><span>Reuniões por dia</span></div><div class="a-fn-n">2</div></div>
+                <div class="a-fn-r"><div class="a-fn-t"><i style="width:16%"></i><span>Conversas com decisores</span></div><div class="a-fn-n">12</div></div>
+                <div class="a-fn-r"><div class="a-fn-t"><i style="width:33%"></i><span>Contatos efetivos</span></div><div class="a-fn-n">25</div></div>
+                <div class="a-fn-r"><div class="a-fn-t"><i style="width:100%"></i><span>Ligações por dia</span></div><div class="a-fn-n">76</div></div>
               </div>
             </div>
             <div class="a-row">
-              <div class="a-mini"><div class="a-mini-v">2h14</div><div class="a-mini-k">No telefone</div></div>
-              <div class="a-mini"><div class="a-mini-v">3</div><div class="a-mini-k">Blocos</div></div>
+              <div class="a-mini"><div class="a-mini-v">2h02</div><div class="a-mini-k">No telefone</div></div>
+              <div class="a-mini"><div class="a-mini-v">3</div><div class="a-mini-k">Blocos de foco</div></div>
             </div>
             <div class="a-card" style="margin-top:9px;border-color:rgba(50,213,131,.3);background:rgba(50,213,131,.07)">
-              <div class="a-sub" style="color:var(--success);margin:0">Suas taxas melhoraram 4% em julho. O plano de agosto já saiu ajustado.</div>
+              <div class="a-sub" style="color:var(--success);margin:0">Cálculo atualizado hoje às 14:05, com base nos seus últimos 30 dias.</div>
             </div>
             <div class="a-tabs">
-              <span class="a-tab"><b>◆</b>Painel</span><span class="a-tab on"><b>◆</b>Metas</span>
-              <span class="a-tab"><b>◆</b>Ouro</span><span class="a-tab"><b>◆</b>Histórico</span><span class="a-tab"><b>◆</b>Mais</span>
+              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-painel"/></svg>Dashboard</span><span class="a-tab on"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-metas"/></svg>Metas</span>
+              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-ouro"/></svg>Ouro</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-hist"/></svg>Histórico</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-mais"/></svg>Mais</span>
             </div>
           </div>
 
-          <!-- TELA 3 · HORA DE OURO -->
-          <div class="scr" data-s="2">
-            <div class="scr-bar"><span>9:41</span><span>▮▮▮ ▲ 100%</span></div>
-            <div class="a-hd" style="justify-content:center">
-              <div style="text-align:center"><div class="a-hd-t">Hora de Ouro</div><div class="a-hd-s">bloco 2 de 3 · sem notificações</div></div>
-            </div>
+          <!-- TELA 4 - HORA DE OURO -->
+          <div class="scr" data-s="3">
+            <div class="scr-bar"><span>14:38</span><svg class="scr-status" viewBox="0 0 47 12" aria-hidden="true"><use href="#i-status"/></svg></div>
+            <div class="a-live"><span class="dot"></span> Foco ativo, bloco 3 <b>Prospecção fria</b></div>
             <div class="hexring">
               <svg viewBox="0 0 100 100" aria-hidden="true">
                 <path d="M50 8 86.4 29v42L50 92 13.6 71V29Z" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="5" stroke-linejoin="round"/>
-                <path d="M50 8 86.4 29v42L50 92 13.6 71V29Z" fill="none" stroke="#F6C344" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="252" stroke-dashoffset="88"/>
+                <path d="M50 8 86.4 29v42L50 92 13.6 71V29Z" fill="none" stroke="#F6C344" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="252" stroke-dashoffset="158"/>
               </svg>
               <div class="hexring-c">
-                <div class="hexring-t">32:10</div>
-                <div class="hexring-k">restantes</div>
+                <div class="hexring-t">18:42</div>
+                <div class="hexring-k">restantes de 50 min</div>
               </div>
             </div>
-            <div class="a-card" style="text-align:center;padding:11px">
-              <div class="a-sub" style="margin:0">Objetivo do bloco: <b style="color:var(--honey)">14 ligações</b> · 9 feitas</div>
-            </div>
             <div class="a-row">
-              <div class="a-mini" style="text-align:center"><div class="a-mini-v" style="color:var(--honey)">9</div><div class="a-mini-k">Ligações</div></div>
-              <div class="a-mini" style="text-align:center"><div class="a-mini-v">3</div><div class="a-mini-k">Contatos</div></div>
+              <div class="a-mini" style="text-align:center"><div class="a-mini-v" style="color:var(--honey)">18</div><div class="a-mini-k">Ligações</div></div>
+              <div class="a-mini" style="text-align:center"><div class="a-mini-v">6</div><div class="a-mini-k">Efetivos</div></div>
               <div class="a-mini" style="text-align:center"><div class="a-mini-v" style="color:var(--success)">1</div><div class="a-mini-k">Reunião</div></div>
             </div>
-            <div class="a-card" style="margin-top:9px;display:flex;gap:9px;align-items:flex-start">
-              <svg class="a-av" style="width:22px;height:22px;flex:none" viewBox="0 0 32 32" aria-hidden="true"><use href="#bee"/></svg>
-              <div class="a-sub" style="margin:0">Seu melhor horário é entre 10h e 11h. Faltam 5 ligações para fechar o bloco no ritmo.</div>
+            <button class="a-btn" style="margin:12px 0 8px" type="button" tabindex="-1">Mais 1 ligação</button>
+            <div class="a-row">
+              <span class="a-ghost">Pausar</span>
+              <span class="a-ghost">Finalizar</span>
             </div>
-            <button class="a-btn" type="button" tabindex="-1">Registrar resultado</button>
+            <p class="a-foot">Sem notificações e sem anúncios até o fim do bloco.</p>
             <div class="a-tabs">
-              <span class="a-tab"><b>◆</b>Painel</span><span class="a-tab"><b>◆</b>Metas</span>
-              <span class="a-tab on"><b>◆</b>Ouro</span><span class="a-tab"><b>◆</b>Histórico</span><span class="a-tab"><b>◆</b>Mais</span>
+              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-painel"/></svg>Dashboard</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-metas"/></svg>Metas</span>
+              <span class="a-tab on"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-ouro"/></svg>Ouro</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-hist"/></svg>Histórico</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-mais"/></svg>Mais</span>
             </div>
           </div>
 
-          <!-- TELA 4 · HISTÓRICO -->
-          <div class="scr" data-s="3">
-            <div class="scr-bar"><span>9:41</span><span>▮▮▮ ▲ 100%</span></div>
+          <!-- TELA 5 - HISTORICO -->
+          <div class="scr" data-s="4">
+            <div class="scr-bar"><span>15:20</span><svg class="scr-status" viewBox="0 0 47 12" aria-hidden="true"><use href="#i-status"/></svg></div>
             <div class="a-hd">
-              <div><div class="a-hd-t">Histórico</div><div class="a-hd-s">últimos 7 dias</div></div>
+              <div><div class="a-hd-t">Histórico</div><div class="a-hd-s">agosto, até hoje</div></div>
             </div>
             <div class="a-card">
-              <div class="a-k"><span>Ligações por dia</span><span style="color:var(--success)">+12%</span></div>
+              <div class="a-k"><span>Reuniões agendadas</span><span style="color:var(--attention)">53% DA META</span></div>
+              <div class="a-big">21<small>/40</small></div>
               <div class="a-chart">
                 <div style="height:52%"></div><div style="height:71%"></div><div class="lo" style="height:34%"></div>
                 <div style="height:84%"></div><div style="height:62%"></div><div class="lo" style="height:28%"></div><div style="height:96%"></div>
               </div>
-              <div class="a-chart-x"><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span><span>D</span></div>
+              <div class="a-chart-x"><span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S5</span><span>S6</span><span>S7</span></div>
             </div>
-            <div class="a-row" style="margin-bottom:9px">
-              <div class="a-mini"><div class="a-mini-v" style="color:var(--success)">31%</div><div class="a-mini-k">Ligação→contato</div></div>
-              <div class="a-mini"><div class="a-mini-v">24%</div><div class="a-mini-k">Decisor→reunião</div></div>
+            <div class="a-row" style="margin-bottom:7px">
+              <div class="a-mini"><div class="a-mini-v">812</div><div class="a-mini-k">Ligações</div><div class="a-mini-f" style="color:var(--success)">+14% vs julho</div></div>
+              <div class="a-mini"><div class="a-mini-v">42h</div><div class="a-mini-k">Tempo em foco</div><div class="a-mini-f">6% abaixo</div></div>
             </div>
             <div class="a-card">
-              <div class="a-k"><span>Leitura do período</span></div>
-              <div class="a-fn">
-                <div class="a-fn-r" style="grid-template-columns:1fr auto"><span>Melhor dia</span><span class="a-fn-n" style="min-width:auto">quinta</span></div>
-                <div class="a-fn-r" style="grid-template-columns:1fr auto"><span>Melhor horário</span><span class="a-fn-n" style="min-width:auto">10h–11h</span></div>
-                <div class="a-fn-r" style="grid-template-columns:1fr auto"><span>Comparecimento</span><span class="a-fn-n" style="min-width:auto;color:var(--attention)">72%</span></div>
+              <div class="a-k"><span>Padrões do mês</span></div>
+              <div class="a-list">
+                <div class="a-li"><span>Melhor dia</span><b>terça, 2,4 reuniões</b></div>
+                <div class="a-li"><span>Melhor horário</span><b>10h às 11h</b></div>
+                <div class="a-li"><span>Decisor para reunião</span><b style="color:var(--success)">17,8%</b></div>
               </div>
             </div>
             <div class="a-tabs">
-              <span class="a-tab"><b>◆</b>Painel</span><span class="a-tab"><b>◆</b>Metas</span>
-              <span class="a-tab"><b>◆</b>Ouro</span><span class="a-tab on"><b>◆</b>Histórico</span><span class="a-tab"><b>◆</b>Mais</span>
+              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-painel"/></svg>Dashboard</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-metas"/></svg>Metas</span>
+              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-ouro"/></svg>Ouro</span><span class="a-tab on"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-hist"/></svg>Histórico</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-mais"/></svg>Mais</span>
             </div>
           </div>
 
@@ -1220,9 +1330,9 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   <svg class="hexfield" style="opacity:.32" aria-hidden="true"><rect width="100%" height="100%" fill="url(#hexpat)"/></svg>
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="eyebrow">A Bee, sua treinadora</p>
+      <p class="eyebrow">BeeIA, sua treinadora</p>
       <h2 class="display">Feedback de ligação no mesmo dia,<br>não na 1:1 da sexta</h2>
-      <p class="lede">Seu gestor tem oito SDRs e quarenta minutos por semana. A Bee ouve todas as suas ligações e devolve o que travou a conversa — com o trecho exato.</p>
+      <p class="lede">Seu gestor tem oito SDRs e quarenta minutos por semana. A BeeIA ouve todas as suas ligações e devolve o que travou a conversa, com o trecho exato.</p>
     </div>
 
     <div class="tabs rv" role="tablist" aria-label="Recursos de IA">
@@ -1237,29 +1347,37 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
           <div class="report-hd">
             <svg class="a-av" viewBox="0 0 32 32" aria-hidden="true"><use href="#bee"/></svg>
             <div>
-              <div class="report-hd-t">Ligação · Construtora Vega</div>
-              <div class="report-hd-s">7min 42s · outbound · analisada há 4 min</div>
+              <div class="report-hd-t">Nexa Logística</div>
+              <div class="report-hd-s">8min12 · descoberta · analisada há 4 min</div>
             </div>
-            <div class="score"><div class="score-v num">78</div><div class="score-k">score</div></div>
+            <div class="score"><div class="score-v num">82</div><div class="score-k">score</div></div>
           </div>
           <div class="report-bd">
             <div class="wave" id="wave" aria-hidden="true"></div>
 
             <div class="ratio" aria-label="Proporção fala e escuta">
-              <div class="ratio-a" style="width:58%">VOCÊ FALOU 58%</div>
-              <div class="ratio-b" style="width:42%">LEAD 42%</div>
+              <div class="ratio-a" style="width:38%">VOCÊ 38%</div>
+              <div class="ratio-b" style="width:62%">LEAD 62%</div>
             </div>
 
             <div class="marks">
-              <div class="mk"><span class="mk-lb">Perguntas abertas</span><span class="mk-t"><i style="width:82%;background:var(--success)"></i></span><span class="mk-n">8,2</span></div>
-              <div class="mk"><span class="mk-lb">Rapport</span><span class="mk-t"><i style="width:74%;background:var(--success)"></i></span><span class="mk-n">7,4</span></div>
+              <div class="mk"><span class="mk-lb">Clareza</span><span class="mk-t"><i style="width:81%;background:var(--success)"></i></span><span class="mk-n">8,1</span></div>
+              <div class="mk"><span class="mk-lb">Empatia</span><span class="mk-t"><i style="width:74%;background:var(--success)"></i></span><span class="mk-n">7,4</span></div>
+              <div class="mk"><span class="mk-lb">Rapport</span><span class="mk-t"><i style="width:78%;background:var(--success)"></i></span><span class="mk-n">7,8</span></div>
               <div class="mk"><span class="mk-lb">Tratou objeção</span><span class="mk-t"><i style="width:41%;background:var(--attention)"></i></span><span class="mk-n">4,1</span></div>
               <div class="mk"><span class="mk-lb">Fechou próximo passo</span><span class="mk-t"><i style="width:35%;background:var(--attention)"></i></span><span class="mk-n">3,5</span></div>
             </div>
 
+            <div class="moments">
+              <span class="moments-k">Momentos importantes</span>
+              <div class="moment"><b>01:42</b><span>Lead admite perder prazos de entrega</span></div>
+              <div class="moment"><b>04:18</b><span>Objeção de preço sem aprofundamento</span></div>
+              <div class="moment"><b>07:05</b><span>Convite para reunião sem data definida</span></div>
+            </div>
+
             <div class="beetip">
               <svg class="a-av" viewBox="0 0 32 32" aria-hidden="true"><use href="#bee"/></svg>
-              <p><b>Aos 4min12, o lead disse "já temos fornecedor" e você mudou de assunto.</b> Na próxima, pergunte há quanto tempo e o que mudaria se o contrato vencesse hoje. Quer treinar essa objeção agora?</p>
+              <p><b>BeeIA:</b> aos 04:18 veio a objeção de preço e você respondeu sem aprofundar. Aos 07:05 você convidou para reunião sem propor data. Na próxima, ofereça dois horários concretos ao encerrar. <b>Quer treinar essa situação agora?</b></p>
             </div>
           </div>
         </div>
@@ -1267,9 +1385,9 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
         <div class="rv">
           <h3 class="display">Sobe o áudio. Recebe o mapa da conversa.</h3>
           <ul class="feat-list">
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Score e transcrição completa</b> com linha do tempo — clique no ponto fraco e ouça o trecho.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Score e transcrição completa</b> com linha do tempo. Clique no ponto fraco e ouça o trecho.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Fala versus escuta, clareza, empatia e rapport</b> medidos em cada ligação, não no chute.</span></li>
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Relatório para baixar ou mandar para o gestor</b> — vira pauta de 1:1 com evidência.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Relatório para baixar ou mandar para o gestor</b>. Vira pauta de 1:1 com evidência.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>MP3, WAV ou M4A.</b> Gravação só é enviada com o seu consentimento e pode ser apagada quando você quiser.</span></li>
           </ul>
         </div>
@@ -1283,16 +1401,16 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
           <div class="report-hd">
             <svg class="a-av" viewBox="0 0 32 32" aria-hidden="true"><use href="#bee"/></svg>
             <div>
-              <div class="report-hd-t">Roleplay · Diretor financeiro cético</div>
-              <div class="report-hd-s">objeção de preço · dificuldade alta · 04:18</div>
+              <div class="report-hd-t">Ricardo Campos, gerente de operações</div>
+              <div class="report-hd-s">logística · objeção de preço · difícil · 04:12</div>
             </div>
-            <div class="score"><div class="score-v num" style="color:var(--attention)">64</div><div class="score-k">ao vivo</div></div>
+            <div class="score"><div class="score-v num" style="color:var(--attention)">67</div><div class="score-k">ao vivo</div></div>
           </div>
           <div class="chat">
-            <div class="msg msg-l"><span class="msg-who">Lead simulado</span>Olha, eu tenho dois minutos. Já usamos uma ferramenta parecida e não vingou.</div>
-            <div class="msg msg-r"><span class="msg-who">Você</span>Entendo. Posso perguntar o que exatamente não vingou — foi adoção do time ou o resultado não apareceu?</div>
-            <div class="msg-note">↑ boa pergunta aberta · +0,6 no score</div>
-            <div class="msg msg-l"><span class="msg-who">Lead simulado</span>O time não usou. E agora estou com o orçamento travado até dezembro.</div>
+            <div class="msg msg-l"><span class="msg-who">Lead simulado</span>Olha, o preço de vocês está bem acima do que pago hoje.</div>
+            <div class="msg msg-r"><span class="msg-who">Você</span>Entendo. Posso perguntar quanto você paga hoje e o que está incluso nesse valor?</div>
+            <div class="msg-note"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg>boa pergunta aberta · +0,6 no score</div>
+            <div class="msg msg-l"><span class="msg-who">Lead simulado</span>Fechamos por quatro mil no ano passado. E o orçamento está travado até dezembro.</div>
             <div class="msg msg-r" style="opacity:.55"><span class="msg-who">Você</span>digitando…</div>
           </div>
         </div>
@@ -1301,48 +1419,10 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
           <h3 class="display">Erre com a IA às 8h para não errar com o lead às 9h</h3>
           <ul class="feat-list">
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Você monta o cenário:</b> cargo, segmento, comportamento, tipo de objeção e nível de dificuldade.</span></li>
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Chamada por voz com personagem de IA</b> — abertura, descoberta, objeção e fechamento, como na vida real.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Chamada por voz com personagem de IA</b>: abertura, descoberta, objeção e fechamento, como na vida real.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Análise em tempo real</b> de tom, ritmo e perguntas abertas, com roteiro sugerido quando você travar.</span></li>
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Treine a objeção que você acabou de perder</b> — o relatório da ligação real abre o roleplay com um toque.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Treine a objeção que você acabou de perder</b>. O relatório da ligação real abre o roleplay com um toque.</span></li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CARREIRA ===================== -->
-<section class="sec sec--tight" id="carreira">
-  <div class="wrap panel-grid">
-    <div class="rv">
-      <p class="eyebrow">Carreira</p>
-      <h2 class="display">SDR bom não fica parado.<br>E também não devia caçar vaga em cinco portais.</h2>
-      <p class="lede">O Banco de Vagas reúne oportunidades de pré-vendas do LinkedIn, Gupy, Glassdoor e sites de empresa em um lugar só — e mostra o quanto o seu perfil combina com cada uma, com o motivo escrito.</p>
-      <ul class="feat-list">
-        <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Perfil profissional e currículo em PDF montados a partir dos seus próprios números.</span></li>
-        <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Vagas salvas, alertas e histórico de candidaturas.</span></li>
-        <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Origem da vaga sempre visível — você é levado direto para a fonte original.</span></li>
-      </ul>
-    </div>
-
-    <div class="report rv">
-      <div class="report-hd">
-        <div>
-          <div class="report-hd-t">SDR Outbound · SaaS B2B</div>
-          <div class="report-hd-s">Remoto · via LinkedIn · há 2 dias</div>
-        </div>
-        <div class="score"><div class="score-v num" style="color:var(--honey)">91%</div><div class="score-k">compatível</div></div>
-      </div>
-      <div class="report-bd">
-        <div class="marks" style="margin-bottom:16px">
-          <div class="mk"><span class="mk-lb">Experiência outbound</span><span class="mk-t"><i style="width:96%;background:var(--success)"></i></span><span class="mk-n">✓</span></div>
-          <div class="mk"><span class="mk-lb">Trabalho remoto</span><span class="mk-t"><i style="width:100%;background:var(--success)"></i></span><span class="mk-n">✓</span></div>
-          <div class="mk"><span class="mk-lb">HubSpot</span><span class="mk-t"><i style="width:88%;background:var(--success)"></i></span><span class="mk-n">✓</span></div>
-          <div class="mk"><span class="mk-lb">Inglês intermediário</span><span class="mk-t"><i style="width:38%;background:var(--attention)"></i></span><span class="mk-n">!</span></div>
-        </div>
-        <div class="beetip">
-          <svg class="a-av" viewBox="0 0 32 32" aria-hidden="true"><use href="#bee"/></svg>
-          <p>Você atende quase tudo o que a vaga pede. <b>O único ponto faltante é inglês intermediário</b> — vale citar no resumo da candidatura como está evoluindo.</p>
         </div>
       </div>
     </div>
@@ -1366,17 +1446,17 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:#A8A093" aria-hidden="true"><use href="#cross"/></svg><span>A planilha diz quantas ligações você fez. Nunca quantas faltam.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:#A8A093" aria-hidden="true"><use href="#cross"/></svg><span>Feedback de ligação depende da agenda do seu gestor.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:#A8A093" aria-hidden="true"><use href="#cross"/></svg><span>Você treina objeção ao vivo, com lead de verdade.</span></li>
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:#A8A093" aria-hidden="true"><use href="#cross"/></svg><span>Na entrevista, você fala de resultado sem número na mão.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:#A8A093" aria-hidden="true"><use href="#cross"/></svg><span>Cada bloco de foco é interrompido por notificação e aba aberta.</span></li>
           </ul>
         </div>
         <div class="vs-col vs-col--now rv">
           <p class="vs-h">Com o SDR Performance</p>
           <ul>
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Você sabe no dia 3 se o ritmo fecha o mês — e quanto precisa subir.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Você sabe no dia 3 se o ritmo fecha o mês, e quanto precisa subir.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>A previsão se refaz sozinha a cada resultado registrado.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Análise da ligação em minutos, com o trecho exato do erro.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Você treina a objeção no roleplay antes de gastar um lead bom.</span></li>
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Seu histórico vira perfil, currículo e argumento de negociação.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Durante a Hora de Ouro nada interrompe: sem notificação e sem anúncio.</span></li>
           </ul>
         </div>
       </div>
@@ -1397,7 +1477,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
             <rect x="16" y="14" width="8" height="14" rx="2" fill="#F6C344"/>
           </svg>
           <h3>Aplicativo mobile</h3>
-          <p>A rotina inteira no bolso: metas, Hora de Ouro, registro rápido, IA e carreira.</p>
+          <p>A rotina inteira no bolso: onboarding, metas, Hora de Ouro, registro rápido e IA.</p>
           <span class="plat-tag plat-tag--first">Primeiro a chegar</span>
         </div>
         <div class="plat rv">
@@ -1439,7 +1519,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
             <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:#9A6E00" aria-hidden="true"><use href="#check"/></svg><span>Metas, planejamento reverso e dashboard</span></li>
             <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:#9A6E00" aria-hidden="true"><use href="#check"/></svg><span>Hora de Ouro e registro de resultados</span></li>
             <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:#9A6E00" aria-hidden="true"><use href="#check"/></svg><span>Histórico básico e funil completo</span></li>
-            <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:#9A6E00" aria-hidden="true"><use href="#check"/></svg><span>Banco de vagas e perfil profissional</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:#9A6E00" aria-hidden="true"><use href="#check"/></svg><span>Registro rápido que recalcula a previsão na hora</span></li>
           </ul>
           <a href="#lista" class="btn btn--dark btn--block">Quero começar por aqui</a>
         </div>
@@ -1452,7 +1532,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
             <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Tudo do gratuito, sem anúncio nenhum</span></li>
             <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Análise de ligações por IA com relatório</span></li>
             <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Roleplay por voz e análise em tempo real</span></li>
-            <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Relatórios avançados e compatibilidade de vagas</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Análise em tempo real e relatórios avançados</span></li>
           </ul>
           <a href="#lista" class="btn btn--primary btn--block magnet">Entrar na lista</a>
         </div>
@@ -1463,7 +1543,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
           <ul>
             <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:#9A6E00" aria-hidden="true"><use href="#check"/></svg><span>Painel de acompanhamento do time</span></li>
             <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:#9A6E00" aria-hidden="true"><use href="#check"/></svg><span>Análise de ligações e trilhas de treinamento</span></li>
-            <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:#9A6E00" aria-hidden="true"><use href="#check"/></svg><span>Publicação de vagas e banco de talentos</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:#9A6E00" aria-hidden="true"><use href="#check"/></svg><span>Relatórios consolidados e ranking interno</span></li>
             <li><svg width="18" height="18" viewBox="0 0 20 20" style="color:#9A6E00" aria-hidden="true"><use href="#check"/></svg><span>Onboarding acompanhado do time</span></li>
           </ul>
           <a href="#lista" class="btn btn--dark btn--block">Falar sobre o time</a>
@@ -1524,13 +1604,13 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
         <h2 class="display">A conta do seu mês já está feita.<br>Falta o app na sua mão.</h2>
         <p class="lede" style="margin-inline:auto;text-align:center">Entre na lista de acesso antecipado. Você recebe o convite do beta antes da abertura pública e ajuda a decidir o que entra primeiro.</p>
 
-        <form class="form" id="form" novalidate>
+        <form class="form" id="form" action="https://formsubmit.co/Franciscoericlisoliveira@gmail.com" method="POST" novalidate>
           <div class="form-f">
-            <label class="visually-hidden" for="email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Seu e-mail</label>
+            <label class="sr" for="email">Seu e-mail</label>
             <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
           </div>
           <div class="form-f">
-            <label class="visually-hidden" for="funcao" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Sua função</label>
+            <label class="sr" for="funcao">Sua função</label>
             <select id="funcao" name="funcao">
               <option value="">Sua função</option>
               <option>SDR</option>
@@ -1541,14 +1621,21 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
               <option>Outra</option>
             </select>
           </div>
+
+          <input type="hidden" name="_subject" value="Nova inscricao na lista do SDR Performance">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="origem" id="origem" value="landing page">
+          <input type="text" name="_honey" id="honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
           <span class="form-err" id="err" role="alert"></span>
-          <button type="submit" class="btn btn--primary magnet">Garantir meu acesso antecipado</button>
+          <button type="submit" class="btn btn--primary magnet" id="formBtn">Garantir meu acesso antecipado</button>
           <p class="form-note">Um e-mail quando o beta abrir. Nada além disso.</p>
         </form>
 
         <div class="form-ok" id="ok" role="status">
           <strong>Pronto. Você está na lista.</strong>
-          <p>Assim que o beta abrir, o convite chega no e-mail que você cadastrou. Enquanto isso, guarde o número que apareceu lá em cima — é ele que decide o seu mês.</p>
+          <p>Seu cadastro chegou. Assim que o beta abrir, o convite vai para o e-mail que você informou. Enquanto isso, guarde o número de ligações que apareceu lá em cima: é ele que decide o seu mês.</p>
         </div>
       </div>
     </div>
@@ -1579,7 +1666,6 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
           <li><a href="#rotina">Rotina diária</a></li>
           <li><a href="#ia">Análise de ligações</a></li>
           <li><a href="#ia">Roleplay com IA</a></li>
-          <li><a href="#carreira">Banco de vagas</a></li>
           <li><a href="#planos">Planos</a></li>
         </ul>
       </div>
@@ -1588,7 +1674,6 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
         <ul>
           <li><a href="#planos">Licenças para times</a></li>
           <li><a href="#planos">Painel do gestor</a></li>
-          <li><a href="#lista">Publicar vagas</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -1630,7 +1715,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   var seq = "";
   for (var r=0; r<8; r++){
     for (var i=0; i<stages.length; i++){
-      seq += '<span class="ticker-item"><span class="ticker-sep"></span><b>' + stages[i] + '</b></span>';
+      seq += '<span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hex"/></svg><b>' + stages[i] + '</b></span>';
     }
   }
   track.innerHTML = seq;
@@ -1669,7 +1754,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   }
 
   /* ============================================================
-     CALCULADORA — planejamento reverso (doc §18.2)
+     CALCULADORA / planejamento reverso (doc §18.2)
      ============================================================ */
   var meta = $("#meta"), dias = $("#dias");
   var t1 = $("#t1"), t2 = $("#t2"), t3 = $("#t3"), t4 = $("#t4");
@@ -1678,7 +1763,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
     tempo: $("#vTempo"), blocos: $("#vBlocos")
   };
   var rows = { lig: $("#rowLig"), con: $("#rowCon"), dec: $("#rowDec"), reu: $("#rowReu") };
-  var shown = { lig:42, con:13, dec:5, reu:1 };
+  var shown = { lig:76, con:25, dec:12, reu:2 };
   var tweens = {};
 
   function fillTrack(el){
@@ -1724,10 +1809,10 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
     $("#diasOut").textContent = dias.value;
 
     var m = +meta.value, d = +dias.value;
-    var c1 = pct(t1, 1, 100, 30) / 100;
-    var c2 = pct(t2, 1, 100, 35) / 100;
-    var c3 = pct(t3, 1, 100, 22) / 100;
-    var mn = pct(t4, 0.5, 30, 3.2);
+    var c1 = pct(t1, 1, 100, 32) / 100;
+    var c2 = pct(t2, 1, 100, 46) / 100;
+    var c3 = pct(t3, 1, 100, 18) / 100;
+    var mn = pct(t4, 0.5, 30, 1.6);
 
     var reuDia = m / d;
     var dec = reuDia / c3;
@@ -1759,7 +1844,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   recalc();
 
   /* ============================================================
-     TOUR — troca de telas no scroll
+     TOUR / troca de telas no scroll
      ============================================================ */
   var steps = $$(".step");
   var scrs = $$(".scr");
@@ -1851,10 +1936,29 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
     });
   }
 
-  /* ---------- formulário ---------- */
-  var form = $("#form"), err = $("#err"), ok = $("#ok"), email = $("#email");
+  /* ============================================================
+     FORMULARIO - envio real via FormSubmit
+     O e-mail de destino esta no atributo action do <form>.
+     Para trocar, edite o action. Para esconder o e-mail de robos,
+     substitua-o pelo token gerado pelo FormSubmit apos a ativacao.
+     ============================================================ */
+  var form = $("#form"), err = $("#err"), ok = $("#ok");
+  var email = $("#email"), funcao = $("#funcao"), honey = $("#honey"), btn = $("#formBtn");
+  var btnLabel = btn.textContent;
+  var endpoint = form.getAttribute("action").replace("formsubmit.co/", "formsubmit.co/ajax/");
+
+  $("#origem").value = "landing page - " + (document.referrer || "acesso direto");
+
+  function falha(msg){
+    btn.disabled = false;
+    btn.textContent = btnLabel;
+    err.innerHTML = msg;
+  }
+
   form.addEventListener("submit", function(e){
     e.preventDefault();
+    if (honey.value) return;
+
     var v = email.value.trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){
       err.textContent = "Confira o e-mail: faltou o @ ou o domínio.";
@@ -1862,13 +1966,35 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
       return;
     }
     err.textContent = "";
-    /* Sem back-end nesta página: conecte aqui o seu endpoint de captura. */
-    form.style.display = "none";
-    ok.classList.add("is-on");
-    ok.setAttribute("tabindex", "-1");
-    ok.focus();
+    btn.disabled = true;
+    btn.textContent = "Enviando...";
+
+    var dados = new FormData(form);
+    dados.set("email", v);
+    dados.set("funcao", funcao.value || "não informado");
+
+    fetch(endpoint, {
+      method: "POST",
+      body: dados,
+      headers: { "Accept": "application/json" }
+    })
+    .then(function(r){ return r.json().catch(function(){ return {}; }); })
+    .then(function(d){
+      if (d && (d.success === "true" || d.success === true)){
+        form.style.display = "none";
+        ok.classList.add("is-on");
+        ok.setAttribute("tabindex", "-1");
+        ok.focus();
+      } else {
+        throw new Error((d && d.message) || "resposta inesperada");
+      }
+    })
+    .catch(function(){
+      falha('Não consegui enviar agora. Tente de novo em instantes ou escreva para <a href="mailto:Franciscoericlisoliveira@gmail.com?subject=Quero%20entrar%20na%20lista%20do%20SDR%20Performance">Franciscoericlisoliveira@gmail.com</a>.');
+    });
   });
-  email.addEventListener("input", function(){ if (err.textContent) err.textContent = ""; });
+
+  email.addEventListener("input", function(){ if (err.textContent || err.innerHTML) err.innerHTML = ""; });
 })();
 </script>
 </body>
