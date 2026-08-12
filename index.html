@@ -1604,7 +1604,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
         <h2 class="display">A conta do seu mês já está feita.<br>Falta o app na sua mão.</h2>
         <p class="lede" style="margin-inline:auto;text-align:center">Entre na lista de acesso antecipado. Você recebe o convite do beta antes da abertura pública e ajuda a decidir o que entra primeiro.</p>
 
-        <form class="form" id="form" action="https://formsubmit.co/Franciscoericlisoliveira@gmail.com" method="POST" novalidate>
+        <form class="form" id="form" action="https://formspree.io/f/mgawykvb" method="POST" novalidate>
           <div class="form-f">
             <label class="sr" for="email">Seu e-mail</label>
             <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
@@ -1623,10 +1623,8 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
           </div>
 
           <input type="hidden" name="_subject" value="Nova inscricao na lista do SDR Performance">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="origem" id="origem" value="landing page">
-          <input type="text" name="_honey" id="honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="text" name="_gotcha" id="honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <span class="form-err" id="err" role="alert"></span>
           <button type="submit" class="btn btn--primary magnet" id="formBtn">Garantir meu acesso antecipado</button>
@@ -1937,15 +1935,14 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   }
 
   /* ============================================================
-     FORMULARIO - envio real via FormSubmit
-     O e-mail de destino esta no atributo action do <form>.
-     Para trocar, edite o action. Para esconder o e-mail de robos,
-     substitua-o pelo token gerado pelo FormSubmit apos a ativacao.
+     FORMULARIO - envio real via Formspree
+     O endpoint esta no atributo action do <form>. Para trocar de
+     conta ou de destino, basta editar o action: o JS le de la.
      ============================================================ */
   var form = $("#form"), err = $("#err"), ok = $("#ok");
   var email = $("#email"), funcao = $("#funcao"), honey = $("#honey"), btn = $("#formBtn");
   var btnLabel = btn.textContent;
-  var endpoint = form.getAttribute("action").replace("formsubmit.co/", "formsubmit.co/ajax/");
+  var endpoint = form.getAttribute("action");
 
   $("#origem").value = "landing page - " + (document.referrer || "acesso direto");
 
@@ -1954,6 +1951,8 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
     btn.textContent = btnLabel;
     err.innerHTML = msg;
   }
+
+  var FALLBACK = 'Não consegui enviar agora. Tente de novo em instantes ou escreva para <a href="mailto:Franciscoericlisoliveira@gmail.com?subject=Quero%20entrar%20na%20lista%20do%20SDR%20Performance">Franciscoericlisoliveira@gmail.com</a>.';
 
   form.addEventListener("submit", function(e){
     e.preventDefault();
@@ -1978,20 +1977,27 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
       body: dados,
       headers: { "Accept": "application/json" }
     })
-    .then(function(r){ return r.json().catch(function(){ return {}; }); })
-    .then(function(d){
-      if (d && (d.success === "true" || d.success === true)){
+    .then(function(r){
+      return r.json().catch(function(){ return {}; }).then(function(d){
+        return { status: r.status, ok: r.ok, dados: d };
+      });
+    })
+    .then(function(res){
+      if (res.ok){
         form.style.display = "none";
         ok.classList.add("is-on");
         ok.setAttribute("tabindex", "-1");
         ok.focus();
+        return;
+      }
+      var lista = res.dados && res.dados.errors;
+      if (lista && lista.length && lista[0].message){
+        falha("Não deu certo: " + lista[0].message + ".");
       } else {
-        throw new Error((d && d.message) || "resposta inesperada");
+        falha(FALLBACK);
       }
     })
-    .catch(function(){
-      falha('Não consegui enviar agora. Tente de novo em instantes ou escreva para <a href="mailto:Franciscoericlisoliveira@gmail.com?subject=Quero%20entrar%20na%20lista%20do%20SDR%20Performance">Franciscoericlisoliveira@gmail.com</a>.');
-    });
+    .catch(function(){ falha(FALLBACK); });
   });
 
   email.addEventListener("input", function(){ if (err.textContent || err.innerHTML) err.innerHTML = ""; });
