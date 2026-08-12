@@ -1851,12 +1851,25 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
     });
   }
 
-<div style="margin-top: 40px;">
-  <a href="https://forms.gle/ZedC17wryfqtxqex5" target="_blank" rel="noopener noreferrer" class="btn btn--primary magnet" style="padding: 18px 32px; font-size: 18px;">
-    Preencher formulário de acesso
-  </a>
-  <p class="form-note" style="margin-top: 16px;">O formulário será aberto de forma segura no Google Forms.</p>
-</div>
+  /* ---------- formulário ---------- */
+  var form = $("#form"), err = $("#err"), ok = $("#ok"), email = $("#email");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var v = email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){
+      err.textContent = "Confira o e-mail: faltou o @ ou o domínio.";
+      email.focus();
+      return;
+    }
+    err.textContent = "";
+    /* Sem back-end nesta página: conecte aqui o seu endpoint de captura. */
+    form.style.display = "none";
+    ok.classList.add("is-on");
+    ok.setAttribute("tabindex", "-1");
+    ok.focus();
+  });
+  email.addEventListener("input", function(){ if (err.textContent) err.textContent = ""; });
+})();
 </script>
 </body>
 </html>
