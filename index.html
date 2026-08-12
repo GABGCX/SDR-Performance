@@ -1916,49 +1916,54 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   }
 
 /* ---------- formulário ---------- */
-  var form = $("#form"), err = $("#err"), ok = $("#ok"), email = $("#email"), funcao = $("#funcao");
+  var form = $("#form"), err = $("#err"), ok = $("#ok"), email = $("#email");
   
-  form.addEventListener("submit", async function(e){
+  form.addEventListener("submit", function(e){
     e.preventDefault();
     var v = email.value.trim();
-    var f = funcao.value;
     
+    // 1. Validação do e-mail
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){
       err.textContent = "Confira o e-mail: faltou o @ ou o domínio.";
       email.focus();
       return;
     }
     
-    err.textContent = "Enviando..."; // Dá um feedback visual enquanto carrega
+    err.textContent = "Enviando...";
     
-    try {
-      // Aqui está a sua URL do Formspree
-      var urlDoBackend = "https://formspree.io/f/mgawykvb"; 
-      
-      var resposta = await fetch(urlDoBackend, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json" // Garante que o Formspree responda sem redirecionar a página
-        },
-        body: JSON.stringify({ 
-          email: v, 
-          funcao: f 
-        })
-      });
-
-      if (resposta.ok) {
+    // 2. Coleta automática de todos os campos com o atributo 'name' (email e funcao)
+    var formData = new FormData(form);
+    
+    // 3. Envio via AJAX para o Formspree
+    fetch("https://formspree.io/f/mgawykvb", {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json' // Impede que o Formspree redirecione a página
+      }
+    }).then(function(response) {
+      if (response.ok) {
+        // Sucesso: Executa as suas animações originais
         err.textContent = "";
         form.style.display = "none";
         ok.classList.add("is-on");
         ok.setAttribute("tabindex", "-1");
         ok.focus();
       } else {
-        err.textContent = "Erro ao processar cadastro. Tente novamente.";
+        // Tratamento de erros que o Formspree possa retornar
+        response.json().then(function(data) {
+          if (Object.hasOwn(data, 'errors')) {
+            err.textContent = data["errors"].map(function(error) { 
+              return error["message"]; 
+            }).join(", ");
+          } else {
+            err.textContent = "Erro ao processar cadastro. Tente novamente.";
+          }
+        });
       }
-    } catch (erro) {
+    }).catch(function(error) {
       err.textContent = "Erro de conexão. Verifique sua internet.";
-    }
+    });
   });
   
   email.addEventListener("input", function(){ if (err.textContent) err.textContent = ""; });
