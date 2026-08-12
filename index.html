@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SDR Performance: bater a meta não é sorte, é conta</title>
+<title>SDR Performance — bater a meta não é sorte, é conta</title>
 <meta name="description" content="O SDR Performance transforma sua meta mensal em quantas ligações você precisa fazer hoje. Planejamento reverso, blocos de foco, análise de ligações por IA e roleplay. Para SDRs e BDRs.">
-<meta property="og:title" content="SDR Performance: bater a meta não é sorte, é conta">
+<meta property="og:title" content="SDR Performance — bater a meta não é sorte, é conta">
 <meta property="og:description" content="Sua meta mensal virada em plano diário. Com as suas taxas, não com a média do mercado.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   SDR PERFORMANCE / Design tokens
+   SDR PERFORMANCE — Design tokens
    Paleta oficial do produto (doc §19)
    ============================================================ */
 :root{
@@ -129,7 +129,7 @@ h3.display{font-size:clamp(22px,2.4vw,30px);line-height:1.05}
 .num{font-family:var(--mono);font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 .hl{color:var(--honey)}
 
-/* marca-texto mel, usado uma vez no H1 */
+/* marca-texto mel — usado uma vez, no H1 */
 .mark{
   position:relative;
   display:inline-block;
@@ -414,7 +414,8 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   white-space:nowrap;
 }
 .ticker-item b{color:var(--ink-2);font-weight:500}
-
+.ticker-sep{width:5px;height:5px;background:var(--gold);flex:none;
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
 
 /* ============================================================
    PROBLEMA
@@ -430,7 +431,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   font-size:14px;color:var(--ink-3);
   transition:transform .4s cubic-bezier(.2,.7,.3,1),opacity .4s,border-color .3s,color .3s;
 }
-.tool-x{width:14px;height:14px;color:#7A828A;flex:none}
+.tool-x{color:#7A828A;font-family:var(--mono);font-size:12px}
 .problem-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,80px);align-items:center}
 @media (max-width:940px){.problem-grid{grid-template-columns:1fr;gap:44px}}
 
@@ -515,14 +516,6 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   display:flex;align-items:center;justify-content:space-between;
   font-family:var(--mono);font-size:9px;color:var(--ink-3);margin-bottom:12px;padding:0 4px;
 }
-.scr-status{width:37px;height:9.5px;color:var(--ink-2);display:block}
-.a-mini-k svg{width:7px;height:7px;vertical-align:-1px;opacity:.75;margin:0 1px}
-.mk-n svg{width:15px;height:15px;display:inline-block;vertical-align:-3px}
-.msg-note svg{width:11px;height:11px;vertical-align:-2px;margin-right:4px}
-.a-btn svg{width:13px;height:13px;flex:none}
-.hero-meta svg{width:9px;height:9px;color:var(--honey);flex:none}
-.hero-meta span{display:inline-flex;align-items:center;gap:7px}
-.ticker-item svg{width:6px;height:6px;color:var(--gold);flex:none}
 
 /* elementos internos do app */
 .a-hd{display:flex;align-items:center;gap:9px;margin-bottom:14px}
@@ -562,17 +555,17 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 }
 .a-tabs{display:flex;justify-content:space-between;padding:9px 6px 2px;border-top:1px solid rgba(255,255,255,.06);margin-top:9px}
 .a-tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-weight:400;font-family:var(--mono);font-size:7px;letter-spacing:.06em;color:#5F686F;text-transform:uppercase}
-.a-tab svg{width:12px;height:12px;display:block}
+.a-tab b{font-weight:400;font-size:9px;line-height:1}
 .a-tab.on{color:var(--honey)}
 
-/* cronometro hexagonal da Hora de Ouro */
+/* cronômetro hexagonal — Hora de Ouro */
 .hexring{width:150px;height:150px;margin:6px auto 10px;position:relative}
 .hexring svg{width:100%;height:100%;transform:rotate(-90deg)}
 .hexring-c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .hexring-t{font-family:var(--mono);font-size:27px;font-weight:600;letter-spacing:-.02em;line-height:1}
 .hexring-k{font-family:var(--mono);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--honey);margin-top:6px}
 
-/* grafico de barras do Historico */
+/* gráfico de barras — Histórico */
 .a-chart{display:flex;align-items:flex-end;gap:6px;height:78px;margin-top:8px}
 .a-chart div{flex:1;border-radius:4px 4px 2px 2px;background:linear-gradient(180deg,var(--honey),rgba(232,164,0,.35));position:relative}
 .a-chart div.lo{background:linear-gradient(180deg,#4C555D,#333B42)}
@@ -580,7 +573,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 .a-chart-x span{flex:1;text-align:center;font-family:var(--mono);font-size:8px;color:var(--ink-3)}
 
 /* ============================================================
-   IA / abas
+   IA — abas
    ============================================================ */
 .ai{position:relative}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
@@ -651,7 +644,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 .feat-list b{color:var(--ink);font-weight:600}
 
 /* ============================================================
-   BLOCO CLARO / comparacao, plataformas, planos
+   BLOCO CLARO — comparação, plataformas, planos
    ============================================================ */
 .light{background:var(--bone);color:var(--bone-ink);position:relative}
 .light::before{
@@ -837,63 +830,6 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
       <circle cx="18.6" cy="13.4" r="1.15" fill="#F6C344"/>
       <path d="M11.5 8.5 10 5.6M20.5 8.5 22 5.6" stroke="#1B1F24" stroke-width="1.5" stroke-linecap="round"/>
     </symbol>
-    <symbol id="i-hex" viewBox="0 0 24 24">
-      <path d="M12 2.5 20.9 7.6v8.8L12 21.5 3.1 16.4V7.6Z" fill="currentColor"/>
-    </symbol>
-    <symbol id="i-ext" viewBox="0 0 24 24">
-      <path d="M8 16 16 8M9.5 8H16v6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-play" viewBox="0 0 24 24">
-      <path d="M8 5.5v13l11-6.5Z" fill="currentColor"/>
-    </symbol>
-    <symbol id="i-up" viewBox="0 0 24 24">
-      <path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-alert" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
-      <path d="M12 7.5v6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-      <circle cx="12" cy="16.8" r="1.25" fill="currentColor"/>
-    </symbol>
-    <symbol id="i-next" viewBox="0 0 24 24">
-      <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-status" viewBox="0 0 47 12">
-      <rect x="0" y="7.5" width="2.4" height="4.5" rx="1" fill="currentColor"/>
-      <rect x="3.8" y="5.5" width="2.4" height="6.5" rx="1" fill="currentColor"/>
-      <rect x="7.6" y="3" width="2.4" height="9" rx="1" fill="currentColor"/>
-      <path d="M14 6.4a6.4 6.4 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M16.4 9.2a2.8 2.8 0 0 1 3.2 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      <circle cx="18" cy="11.2" r=".9" fill="currentColor"/>
-      <rect x="29.6" y="3" width="14.4" height="8" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.2"/>
-      <rect x="31.2" y="4.6" width="9.6" height="4.8" rx="1.3" fill="currentColor"/>
-      <path d="M45.4 5.6v2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="i-tab-painel" viewBox="0 0 24 24">
-      <rect x="3" y="3" width="8" height="8" rx="2.4" fill="none" stroke="currentColor" stroke-width="2"/>
-      <rect x="13" y="3" width="8" height="8" rx="2.4" fill="none" stroke="currentColor" stroke-width="2"/>
-      <rect x="3" y="13" width="8" height="8" rx="2.4" fill="none" stroke="currentColor" stroke-width="2"/>
-      <rect x="13" y="13" width="8" height="8" rx="2.4" fill="none" stroke="currentColor" stroke-width="2"/>
-    </symbol>
-    <symbol id="i-tab-metas" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
-    </symbol>
-    <symbol id="i-tab-ouro" viewBox="0 0 24 24">
-      <path d="M12 2.8 20.4 7.6v8.8L12 21.2 3.6 16.4V7.6Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-      <path d="M12 8.4V12l2.8 1.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-tab-hist" viewBox="0 0 24 24">
-      <path d="M3 21h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <rect x="4" y="12" width="4" height="6" rx="1.4" fill="currentColor"/>
-      <rect x="10" y="7" width="4" height="11" rx="1.4" fill="currentColor"/>
-      <rect x="16" y="3" width="4" height="15" rx="1.4" fill="currentColor"/>
-    </symbol>
-    <symbol id="i-tab-mais" viewBox="0 0 24 24">
-      <circle cx="5" cy="12" r="2" fill="currentColor"/>
-      <circle cx="12" cy="12" r="2" fill="currentColor"/>
-      <circle cx="19" cy="12" r="2" fill="currentColor"/>
-    </symbol>
     <symbol id="check" viewBox="0 0 20 20">
       <path d="M3 10.5 7.5 15 17 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
@@ -906,7 +842,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 <!-- ===================== NAV ===================== -->
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a href="#topo" class="brand" aria-label="SDR Performance, ir para o início">
+    <a href="#topo" class="brand" aria-label="SDR Performance — início">
       <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
         <path d="M20 2.5 35.2 11.2v17.6L20 37.5 4.8 28.8V11.2Z" fill="none" stroke="#F6C344" stroke-width="2"/>
         <rect x="13" y="21" width="3.6" height="7" rx="1.4" fill="#F6C344" opacity=".55"/>
@@ -937,15 +873,15 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
     <div>
       <p class="eyebrow rv">Acesso antecipado · beta fechado</p>
       <h1 class="display hero-h1 rv">Bater a meta não é sorte.<br>É <span class="mark">conta</span>.</h1>
-      <p class="lede hero-sub rv">O SDR Performance pega a sua meta do mês e devolve quantas ligações você precisa fazer <em>hoje</em>. Quando o dia foge do plano, a conta se refaz sozinha, usando as suas taxas e não a média do mercado.</p>
+      <p class="lede hero-sub rv">O SDR Performance pega a sua meta do mês e devolve quantas ligações você precisa fazer <em>hoje</em>. Quando o dia foge do plano, a conta se refaz sozinha — com as suas taxas, não com a média do mercado.</p>
       <div class="hero-actions rv">
         <a href="#lista" class="btn btn--primary magnet">Entrar na lista de acesso</a>
         <a href="#rotina" class="btn btn--ghost">Ver a rotina completa</a>
       </div>
       <div class="hero-meta rv">
-        <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hex"/></svg>App mobile primeiro</span>
-        <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hex"/></svg>Portal web e extensão</span>
-        <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hex"/></svg>Sem trocar o seu CRM</span>
+        <span><i>◆</i> App mobile primeiro</span>
+        <span><i>◆</i> Portal web e extensão</span>
+        <span><i>◆</i> Sem trocar o seu CRM</span>
       </div>
     </div>
 
@@ -1062,13 +998,13 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
       <h2 class="display rv">Seu dia está espalhado em sete abas</h2>
       <p class="lede rv">Dado é o que não falta. O que falta é a resposta simples, às 14h de uma terça: <strong style="color:var(--ink);font-weight:600">o que eu faço agora para não perder o mês?</strong></p>
       <div class="tools rv" id="tools">
-        <span class="tool">CRM <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
-        <span class="tool">Planilha de controle <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
-        <span class="tool">Discador <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
-        <span class="tool">Bloco de notas <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
-        <span class="tool">Cronômetro <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
-        <span class="tool">Plataforma de treino <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
-        <span class="tool">Portal de vagas <svg class="tool-x" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ext"/></svg></span>
+        <span class="tool">CRM <span class="tool-x">↗</span></span>
+        <span class="tool">Planilha de controle <span class="tool-x">↗</span></span>
+        <span class="tool">Discador <span class="tool-x">↗</span></span>
+        <span class="tool">Bloco de notas <span class="tool-x">↗</span></span>
+        <span class="tool">Cronômetro <span class="tool-x">↗</span></span>
+        <span class="tool">Plataforma de treino <span class="tool-x">↗</span></span>
+        <span class="tool">Portal de vagas <span class="tool-x">↗</span></span>
       </div>
     </div>
 
@@ -1109,7 +1045,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
         <article class="step is-on" data-i="0">
           <span class="step-k">Dashboard</span>
           <h3 class="display">Abre o app e sabe onde está</h3>
-          <p>Meta do dia, quanto falta e a próxima ação, nessa ordem de prioridade visual. Não é um relatório comprimido numa tela de celular.</p>
+          <p>Meta do dia, quanto falta e a próxima ação — nessa ordem de prioridade visual. Não é um relatório comprimido numa tela de celular.</p>
           <ul class="step-list"><li>Meta do dia</li><li>Previsão de hoje</li><li>Funil completo</li><li>Melhor horário</li></ul>
         </article>
 
@@ -1141,7 +1077,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 
           <!-- TELA 1 · DASHBOARD -->
           <div class="scr is-on" data-s="0">
-            <div class="scr-bar"><span>9:41</span><svg class="scr-status" viewBox="0 0 47 12" aria-hidden="true"><use href="#i-status"/></svg></div>
+            <div class="scr-bar"><span>9:41</span><span>▮▮▮ ▲ 100%</span></div>
             <div class="a-hd">
               <svg class="a-av" viewBox="0 0 32 32" aria-hidden="true"><use href="#bee"/></svg>
               <div><div class="a-hd-t">Bom dia, Rafa</div><div class="a-hd-s">terça · 12 de agosto</div></div>
@@ -1166,16 +1102,16 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
                 <div class="a-fn-r"><div class="a-fn-t"><i style="width:12%"></i><span>Reuniões</span></div><div class="a-fn-n">1</div></div>
               </div>
             </div>
-            <button class="a-btn" type="button" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-play"/></svg> Iniciar Hora de Ouro</button>
+            <button class="a-btn" type="button" tabindex="-1">▶ Iniciar Hora de Ouro</button>
             <div class="a-tabs">
-              <span class="a-tab on"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-painel"/></svg>Painel</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-metas"/></svg>Metas</span>
-              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-ouro"/></svg>Ouro</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-hist"/></svg>Histórico</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-mais"/></svg>Mais</span>
+              <span class="a-tab on"><b>◆</b>Painel</span><span class="a-tab"><b>◆</b>Metas</span>
+              <span class="a-tab"><b>◆</b>Ouro</span><span class="a-tab"><b>◆</b>Histórico</span><span class="a-tab"><b>◆</b>Mais</span>
             </div>
           </div>
 
           <!-- TELA 2 · METAS -->
           <div class="scr" data-s="1">
-            <div class="scr-bar"><span>9:41</span><svg class="scr-status" viewBox="0 0 47 12" aria-hidden="true"><use href="#i-status"/></svg></div>
+            <div class="scr-bar"><span>9:41</span><span>▮▮▮ ▲ 100%</span></div>
             <div class="a-hd">
               <div><div class="a-hd-t">Metas e planejamento</div><div class="a-hd-s">agosto · 21 dias úteis</div></div>
             </div>
@@ -1201,14 +1137,14 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
               <div class="a-sub" style="color:var(--success);margin:0">Suas taxas melhoraram 4% em julho. O plano de agosto já saiu ajustado.</div>
             </div>
             <div class="a-tabs">
-              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-painel"/></svg>Painel</span><span class="a-tab on"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-metas"/></svg>Metas</span>
-              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-ouro"/></svg>Ouro</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-hist"/></svg>Histórico</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-mais"/></svg>Mais</span>
+              <span class="a-tab"><b>◆</b>Painel</span><span class="a-tab on"><b>◆</b>Metas</span>
+              <span class="a-tab"><b>◆</b>Ouro</span><span class="a-tab"><b>◆</b>Histórico</span><span class="a-tab"><b>◆</b>Mais</span>
             </div>
           </div>
 
           <!-- TELA 3 · HORA DE OURO -->
           <div class="scr" data-s="2">
-            <div class="scr-bar"><span>9:41</span><svg class="scr-status" viewBox="0 0 47 12" aria-hidden="true"><use href="#i-status"/></svg></div>
+            <div class="scr-bar"><span>9:41</span><span>▮▮▮ ▲ 100%</span></div>
             <div class="a-hd" style="justify-content:center">
               <div style="text-align:center"><div class="a-hd-t">Hora de Ouro</div><div class="a-hd-s">bloco 2 de 3 · sem notificações</div></div>
             </div>
@@ -1236,14 +1172,14 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
             </div>
             <button class="a-btn" type="button" tabindex="-1">Registrar resultado</button>
             <div class="a-tabs">
-              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-painel"/></svg>Painel</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-metas"/></svg>Metas</span>
-              <span class="a-tab on"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-ouro"/></svg>Ouro</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-hist"/></svg>Histórico</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-mais"/></svg>Mais</span>
+              <span class="a-tab"><b>◆</b>Painel</span><span class="a-tab"><b>◆</b>Metas</span>
+              <span class="a-tab on"><b>◆</b>Ouro</span><span class="a-tab"><b>◆</b>Histórico</span><span class="a-tab"><b>◆</b>Mais</span>
             </div>
           </div>
 
           <!-- TELA 4 · HISTÓRICO -->
           <div class="scr" data-s="3">
-            <div class="scr-bar"><span>9:41</span><svg class="scr-status" viewBox="0 0 47 12" aria-hidden="true"><use href="#i-status"/></svg></div>
+            <div class="scr-bar"><span>9:41</span><span>▮▮▮ ▲ 100%</span></div>
             <div class="a-hd">
               <div><div class="a-hd-t">Histórico</div><div class="a-hd-s">últimos 7 dias</div></div>
             </div>
@@ -1256,20 +1192,20 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
               <div class="a-chart-x"><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span><span>D</span></div>
             </div>
             <div class="a-row" style="margin-bottom:9px">
-              <div class="a-mini"><div class="a-mini-v" style="color:var(--success)">31%</div><div class="a-mini-k">Ligação <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-next"/></svg> contato</div></div>
-              <div class="a-mini"><div class="a-mini-v">24%</div><div class="a-mini-k">Decisor <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-next"/></svg> reunião</div></div>
+              <div class="a-mini"><div class="a-mini-v" style="color:var(--success)">31%</div><div class="a-mini-k">Ligação→contato</div></div>
+              <div class="a-mini"><div class="a-mini-v">24%</div><div class="a-mini-k">Decisor→reunião</div></div>
             </div>
             <div class="a-card">
               <div class="a-k"><span>Leitura do período</span></div>
               <div class="a-fn">
                 <div class="a-fn-r" style="grid-template-columns:1fr auto"><span>Melhor dia</span><span class="a-fn-n" style="min-width:auto">quinta</span></div>
-                <div class="a-fn-r" style="grid-template-columns:1fr auto"><span>Melhor horário</span><span class="a-fn-n" style="min-width:auto">10h às 11h</span></div>
+                <div class="a-fn-r" style="grid-template-columns:1fr auto"><span>Melhor horário</span><span class="a-fn-n" style="min-width:auto">10h–11h</span></div>
                 <div class="a-fn-r" style="grid-template-columns:1fr auto"><span>Comparecimento</span><span class="a-fn-n" style="min-width:auto;color:var(--attention)">72%</span></div>
               </div>
             </div>
             <div class="a-tabs">
-              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-painel"/></svg>Painel</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-metas"/></svg>Metas</span>
-              <span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-ouro"/></svg>Ouro</span><span class="a-tab on"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-hist"/></svg>Histórico</span><span class="a-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tab-mais"/></svg>Mais</span>
+              <span class="a-tab"><b>◆</b>Painel</span><span class="a-tab"><b>◆</b>Metas</span>
+              <span class="a-tab"><b>◆</b>Ouro</span><span class="a-tab on"><b>◆</b>Histórico</span><span class="a-tab"><b>◆</b>Mais</span>
             </div>
           </div>
 
@@ -1286,7 +1222,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
     <div class="sec-head rv">
       <p class="eyebrow">A Bee, sua treinadora</p>
       <h2 class="display">Feedback de ligação no mesmo dia,<br>não na 1:1 da sexta</h2>
-      <p class="lede">Seu gestor tem oito SDRs e quarenta minutos por semana. A Bee ouve todas as suas ligações e devolve o que travou a conversa, com o trecho exato.</p>
+      <p class="lede">Seu gestor tem oito SDRs e quarenta minutos por semana. A Bee ouve todas as suas ligações e devolve o que travou a conversa — com o trecho exato.</p>
     </div>
 
     <div class="tabs rv" role="tablist" aria-label="Recursos de IA">
@@ -1331,9 +1267,9 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
         <div class="rv">
           <h3 class="display">Sobe o áudio. Recebe o mapa da conversa.</h3>
           <ul class="feat-list">
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Score e transcrição completa</b> com linha do tempo. Clique no ponto fraco e ouça o trecho.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Score e transcrição completa</b> com linha do tempo — clique no ponto fraco e ouça o trecho.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Fala versus escuta, clareza, empatia e rapport</b> medidos em cada ligação, não no chute.</span></li>
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Relatório para baixar ou mandar para o gestor</b>. Vira pauta de 1:1 com evidência.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Relatório para baixar ou mandar para o gestor</b> — vira pauta de 1:1 com evidência.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>MP3, WAV ou M4A.</b> Gravação só é enviada com o seu consentimento e pode ser apagada quando você quiser.</span></li>
           </ul>
         </div>
@@ -1354,8 +1290,8 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
           </div>
           <div class="chat">
             <div class="msg msg-l"><span class="msg-who">Lead simulado</span>Olha, eu tenho dois minutos. Já usamos uma ferramenta parecida e não vingou.</div>
-            <div class="msg msg-r"><span class="msg-who">Você</span>Entendo. Posso perguntar o que exatamente não vingou, foi adoção do time ou o resultado não apareceu?</div>
-            <div class="msg-note"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg>boa pergunta aberta · +0,6 no score</div>
+            <div class="msg msg-r"><span class="msg-who">Você</span>Entendo. Posso perguntar o que exatamente não vingou — foi adoção do time ou o resultado não apareceu?</div>
+            <div class="msg-note">↑ boa pergunta aberta · +0,6 no score</div>
             <div class="msg msg-l"><span class="msg-who">Lead simulado</span>O time não usou. E agora estou com o orçamento travado até dezembro.</div>
             <div class="msg msg-r" style="opacity:.55"><span class="msg-who">Você</span>digitando…</div>
           </div>
@@ -1365,9 +1301,9 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
           <h3 class="display">Erre com a IA às 8h para não errar com o lead às 9h</h3>
           <ul class="feat-list">
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Você monta o cenário:</b> cargo, segmento, comportamento, tipo de objeção e nível de dificuldade.</span></li>
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Chamada por voz com personagem de IA</b>: abertura, descoberta, objeção e fechamento, como na vida real.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Chamada por voz com personagem de IA</b> — abertura, descoberta, objeção e fechamento, como na vida real.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Análise em tempo real</b> de tom, ritmo e perguntas abertas, com roteiro sugerido quando você travar.</span></li>
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Treine a objeção que você acabou de perder</b>. O relatório da ligação real abre o roleplay com um toque.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span><b>Treine a objeção que você acabou de perder</b> — o relatório da ligação real abre o roleplay com um toque.</span></li>
           </ul>
         </div>
       </div>
@@ -1381,11 +1317,11 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
     <div class="rv">
       <p class="eyebrow">Carreira</p>
       <h2 class="display">SDR bom não fica parado.<br>E também não devia caçar vaga em cinco portais.</h2>
-      <p class="lede">O Banco de Vagas reúne oportunidades de pré-vendas do LinkedIn, Gupy, Glassdoor e sites de empresa em um lugar só, e mostra o quanto o seu perfil combina com cada uma, com o motivo escrito.</p>
+      <p class="lede">O Banco de Vagas reúne oportunidades de pré-vendas do LinkedIn, Gupy, Glassdoor e sites de empresa em um lugar só — e mostra o quanto o seu perfil combina com cada uma, com o motivo escrito.</p>
       <ul class="feat-list">
         <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Perfil profissional e currículo em PDF montados a partir dos seus próprios números.</span></li>
         <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Vagas salvas, alertas e histórico de candidaturas.</span></li>
-        <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Origem da vaga sempre visível. Você é levado direto para a fonte original.</span></li>
+        <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Origem da vaga sempre visível — você é levado direto para a fonte original.</span></li>
       </ul>
     </div>
 
@@ -1399,14 +1335,14 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
       </div>
       <div class="report-bd">
         <div class="marks" style="margin-bottom:16px">
-          <div class="mk"><span class="mk-lb">Experiência outbound</span><span class="mk-t"><i style="width:96%;background:var(--success)"></i></span><span class="mk-n" style="color:var(--success)"><svg viewBox="0 0 20 20" aria-hidden="true"><use href="#check"/></svg></span></div>
-          <div class="mk"><span class="mk-lb">Trabalho remoto</span><span class="mk-t"><i style="width:100%;background:var(--success)"></i></span><span class="mk-n" style="color:var(--success)"><svg viewBox="0 0 20 20" aria-hidden="true"><use href="#check"/></svg></span></div>
-          <div class="mk"><span class="mk-lb">HubSpot</span><span class="mk-t"><i style="width:88%;background:var(--success)"></i></span><span class="mk-n" style="color:var(--success)"><svg viewBox="0 0 20 20" aria-hidden="true"><use href="#check"/></svg></span></div>
-          <div class="mk"><span class="mk-lb">Inglês intermediário</span><span class="mk-t"><i style="width:38%;background:var(--attention)"></i></span><span class="mk-n" style="color:var(--attention)"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-alert"/></svg></span></div>
+          <div class="mk"><span class="mk-lb">Experiência outbound</span><span class="mk-t"><i style="width:96%;background:var(--success)"></i></span><span class="mk-n">✓</span></div>
+          <div class="mk"><span class="mk-lb">Trabalho remoto</span><span class="mk-t"><i style="width:100%;background:var(--success)"></i></span><span class="mk-n">✓</span></div>
+          <div class="mk"><span class="mk-lb">HubSpot</span><span class="mk-t"><i style="width:88%;background:var(--success)"></i></span><span class="mk-n">✓</span></div>
+          <div class="mk"><span class="mk-lb">Inglês intermediário</span><span class="mk-t"><i style="width:38%;background:var(--attention)"></i></span><span class="mk-n">!</span></div>
         </div>
         <div class="beetip">
           <svg class="a-av" viewBox="0 0 32 32" aria-hidden="true"><use href="#bee"/></svg>
-          <p>Você atende quase tudo o que a vaga pede. <b>O único ponto faltante é inglês intermediário</b>. Vale citar no resumo da candidatura como está evoluindo.</p>
+          <p>Você atende quase tudo o que a vaga pede. <b>O único ponto faltante é inglês intermediário</b> — vale citar no resumo da candidatura como está evoluindo.</p>
         </div>
       </div>
     </div>
@@ -1436,7 +1372,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
         <div class="vs-col vs-col--now rv">
           <p class="vs-h">Com o SDR Performance</p>
           <ul>
-            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Você sabe no dia 3 se o ritmo fecha o mês, e quanto precisa subir.</span></li>
+            <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Você sabe no dia 3 se o ritmo fecha o mês — e quanto precisa subir.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>A previsão se refaz sozinha a cada resultado registrado.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Análise da ligação em minutos, com o trecho exato do erro.</span></li>
             <li><svg width="19" height="19" viewBox="0 0 20 20" style="color:var(--honey)" aria-hidden="true"><use href="#check"/></svg><span>Você treina a objeção no roleplay antes de gastar um lead bom.</span></li>
@@ -1612,7 +1548,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
 
         <div class="form-ok" id="ok" role="status">
           <strong>Pronto. Você está na lista.</strong>
-          <p>Assim que o beta abrir, o convite chega no e-mail que você cadastrou. Enquanto isso, guarde o número que apareceu lá em cima. É ele que decide o seu mês.</p>
+          <p>Assim que o beta abrir, o convite chega no e-mail que você cadastrou. Enquanto isso, guarde o número que apareceu lá em cima — é ele que decide o seu mês.</p>
         </div>
       </div>
     </div>
@@ -1694,7 +1630,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   var seq = "";
   for (var r=0; r<8; r++){
     for (var i=0; i<stages.length; i++){
-      seq += '<span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hex"/></svg><b>' + stages[i] + '</b></span>';
+      seq += '<span class="ticker-item"><span class="ticker-sep"></span><b>' + stages[i] + '</b></span>';
     }
   }
   track.innerHTML = seq;
@@ -1733,7 +1669,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   }
 
   /* ============================================================
-     CALCULADORA / planejamento reverso (doc §18.2)
+     CALCULADORA — planejamento reverso (doc §18.2)
      ============================================================ */
   var meta = $("#meta"), dias = $("#dias");
   var t1 = $("#t1"), t2 = $("#t2"), t3 = $("#t3"), t4 = $("#t4");
@@ -1823,7 +1759,7 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
   recalc();
 
   /* ============================================================
-     TOUR / troca de telas no scroll
+     TOUR — troca de telas no scroll
      ============================================================ */
   var steps = $$(".step");
   var scrs = $$(".scr");
@@ -1915,58 +1851,25 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.14)}
     });
   }
 
-/* ---------- formulário ---------- */
+  /* ---------- formulário ---------- */
   var form = $("#form"), err = $("#err"), ok = $("#ok"), email = $("#email");
-  
   form.addEventListener("submit", function(e){
     e.preventDefault();
     var v = email.value.trim();
-    
-    // 1. Validação do e-mail
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){
       err.textContent = "Confira o e-mail: faltou o @ ou o domínio.";
       email.focus();
       return;
     }
-    
-    err.textContent = "Enviando...";
-    
-    // 2. Coleta automática de todos os campos com o atributo 'name' (email e funcao)
-    var formData = new FormData(form);
-    
-    // 3. Envio via AJAX para o Formspree
-    fetch("https://formspree.io/f/mgawykvb", {
-      method: "POST",
-      body: formData,
-      headers: {
-        'Accept': 'application/json' // Impede que o Formspree redirecione a página
-      }
-    }).then(function(response) {
-      if (response.ok) {
-        // Sucesso: Executa as suas animações originais
-        err.textContent = "";
-        form.style.display = "none";
-        ok.classList.add("is-on");
-        ok.setAttribute("tabindex", "-1");
-        ok.focus();
-      } else {
-        // Tratamento de erros que o Formspree possa retornar
-        response.json().then(function(data) {
-          if (Object.hasOwn(data, 'errors')) {
-            err.textContent = data["errors"].map(function(error) { 
-              return error["message"]; 
-            }).join(", ");
-          } else {
-            err.textContent = "Erro ao processar cadastro. Tente novamente.";
-          }
-        });
-      }
-    }).catch(function(error) {
-      err.textContent = "Erro de conexão. Verifique sua internet.";
-    });
+    err.textContent = "";
+    /* Sem back-end nesta página: conecte aqui o seu endpoint de captura. */
+    form.style.display = "none";
+    ok.classList.add("is-on");
+    ok.setAttribute("tabindex", "-1");
+    ok.focus();
   });
-  
   email.addEventListener("input", function(){ if (err.textContent) err.textContent = ""; });
+})();
 </script>
 </body>
 </html>
