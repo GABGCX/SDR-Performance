@@ -1,0 +1,27 @@
+{
+  "name": "sdr-performance",
+  "version": "1.0.0",
+  "description": "SDR Performance: bater a meta não é sorte, é conta",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GABGCX/SDR-Performance.git"
+  },
+  "keywords": [
+    "sdr",
+    "performance",
+    "analytics"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GABGCX/SDR-Performance/issues"
+  },
+  "homepage": "https://github.com/GABGCX/SDR-Performance#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
